@@ -7,18 +7,34 @@ use App\Models\Contact;
 use App\Models\Product;
 use App\Models\Job;
 use App\Models\JobPosition;
+use Illuminate\Support\Facades\Validator;
 use App\Models\ProductMessage;
 use Illuminate\Http\Request;
 use Mail;
 use App\Mail\ContactUsMail;
+use Illuminate\Support\Facades\DB;
 
+$facts = DB::table('facts')->get();
+$insights = DB::table('insights')->get();
+$casestudies = DB::table('casestudies')->get();
 class WebController extends Controller
 {
+   
 
     public function home()
     {
-        // $products = Product::take(2)->get();
-        return view('home');
+        
+        $facts = DB::table('facts')->get();
+        $insights = DB::table('insights')->get();
+        $casestudies = DB::table('casestudies')->get();
+        
+        return view('home', [
+            'casestudies' => $casestudies,
+            'facts' => $facts,
+            'insights' => $insights
+        ]);
+        
+        return view('home',['casestudies' => $casestudies], ['facts' => $facts],['insights'=>$insights]);
     }
 
     public function storeDealerShip(Request $request)
@@ -55,12 +71,87 @@ class WebController extends Controller
         ProductMessage::create($requestData);
         return redirect()->back()->with('success', 'Your submission has been sent successfully.');
     }
+    // --------------------------job apply --------------------
     public function joinus()
     {
-        $jobPositions = JobPosition::all();
-        return view('join-us', compact('jobPositions'));
+        $jobs=DB::table('postjobs')->get();
+        //  return $designations;
+        //  return $jobs;
+        return view('join-us', ['jobs' => $jobs]);
     }
 
+
+    public function jobdetail($id){
+
+        $job=DB::table('postjobs')->where('id', $id)->first();
+      
+        return view('job-detail', ['job' => $job]);
+
+    }
+    public function jobapply($id){
+
+        $job=DB::table('postjobs')->where('id', $id)->first();
+      
+        return view('jobapply', ['job' => $job]);
+
+    }
+    
+    public function jobapplicationstore(Request $request)
+    {
+      
+        $validator = Validator::make($request->all(), [
+            'full_name' => 'required|string',
+            'email' => 'required|email',
+            'phone_number' => 'required|string',
+            'resume' => 'required|file|mimes:pdf,doc,docx|max:2048', // Assuming file size limit is 2MB
+            'linkedin_profile' => 'nullable|url',
+            'years_experience' => 'required|integer',
+            'portfolio_link' => 'nullable|url',
+            'additional_comments' => 'nullable|string',
+            'job_title' => 'required|string',
+            'job_designation' => 'required|string',
+        ]);
+
+        // If validation fails, return back with errors
+        if ($validator->fails()) {
+            return redirect()->back()->with('error', 'An error occurred while submitting your application. Please try again later.');
+        }
+
+        // Handling file upload (resume)
+        // $resumePath = $request->file('resume')->store('resumes', 'private');
+        $resumeName = uniqid() . '_' . $request->file('resume')->getClientOriginalName();
+        
+// Move the file to the desired directory without specifying the base path
+        $request->file('resume')->move(public_path('admin/cv'), $resumeName);
+        // Inserting data into the database
+         try {
+            DB::table('job_applications')->insert([
+                'full_name' => $request->input('full_name'),
+                'email' => $request->input('email'),
+                'phone_number' => $request->input('phone_number'),
+                'resume_path' => 'admin/cv/' .  $resumeName,
+                'linkedin_profile' => $request->input('linkedin_profile'),
+                'years_experience' => $request->input('years_experience'),
+                'portfolio_link' => $request->input('portfolio_link'),
+                'additional_comments' => $request->input('additional_comments'),
+                'job_title' => $request->input('job_title'),
+                'job_designation' => $request->input('job_designation'),
+                'created_at' => now(),
+               
+            ]);
+
+            // Redirect with success message upon successful insertion
+            return redirect()->back()->with('success', 'Application submitted successfully!');
+         } catch (\Exception $e) {
+        //  // Handle any database related errors
+          return redirect()->back()->with('error', 'An error occurred while submitting your application. Please try again later.');
+        }
+    }
+
+
+
+
+    //----------------------enjob apply
     public function storeContactUs(Request $request)
     {
 
@@ -73,7 +164,7 @@ class WebController extends Controller
             'message' => $request->get('message'),
         ];
 
-        Mail::to('your_email@gmail.com')->send(new ContactUsMail($mailData));
+        Mail::to('')->send(new ContactUsMail($mailData));
 
         return redirect()->back()->with('success', 'Your submission has been sent successfully.');
     }
@@ -186,7 +277,8 @@ class WebController extends Controller
 
             $box = 'DIS sets the gold standard in partnering with Microsoft Azure, where precision meets security. With an unwavering commitment to safeguarding information and ensuring its accuracy, DIS emerges as the beacon of trust in the realm of data management. Harnessing cutting-edge technology and a relentless pursuit of excellence, DIS defines the epitome of reliability in safeguarding and optimizing digital assets. Elevate your data integrity with DIS – where every bit is fortified, and every insight is fortified with trust.';
 
-            $approachDescription = "Data Integrity Services (DIS) proposed and implemented a Unified Data Platform, integrating diverse data sources across the retail chain's global network. The platform incorporated advanced analytics, machine learning algorithms, and cloud-based storage to ensure scalability and accessibility.";
+          
+           $approachDescription = "Data Integrity Services (DIS) proposed and implemented a Unified Data Platform, integrating diverse data sources across the retail chain's global network. The platform incorporated advanced analytics, machine learning algorithms, and cloud-based storage to ensure scalability and accessibility.";
             $approach1 = ' Conducted a comprehensive assessment of existing data systems and identified key pain points';
             $approach2 = "Developed a customized Unified Data Platform tailored to the retail chain's specific needs and objectives.";
             $approach3 = 'Seamlessly integrated data from various sources, including sales, inventory, customer behavior, and supply chain, into a centralized platform.';

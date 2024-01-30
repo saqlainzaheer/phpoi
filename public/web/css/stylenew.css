@@ -48,6 +48,49 @@ h1 span {
     line-height: 48px;
     display: block;
 }
+.howtojoin .owl-dots {
+    display: none;
+}
+
+.howtojoin .owl-nav {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 96%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.howtojoin .owl-carousel .owl-nav button.owl-next,
+.howtojoin .owl-carousel .owl-nav button.owl-prev {
+    display: flex;
+    width: 48px;
+    height: 48px;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 24px;
+    border: 1px solid black;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.howtojoin .owl-carousel .owl-nav button.owl-next span {
+    background: url("../images/next.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    font-size: 0px;
+}
+
+.howtojoin .owl-carousel .owl-nav button.owl-prev span {
+    background: url("../images/prev.svg") no-repeat;
+    width: 20px;
+    height: 20px;
+    font-size: 0px;
+}
+
 .homenav.navbar-expand-lg .navbar-collapse {
     flex-basis: unset;
     flex-grow: inherit;

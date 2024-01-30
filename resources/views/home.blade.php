@@ -81,8 +81,28 @@
             <p> Idea & Design suggested.</p>
 
         </div>
+
         <div class="maincontainer">
+            @foreach ($casestudies as $casestudies)
             <figure>
+
+                <div class="imgseccont">
+                    <a href="{{ url('case-study', ['id' => $casestudies->id]) }}">
+
+                        <img src="{{ asset($casestudies->hero_image) }}" alt="Dis">
+                    </a>
+                </div>
+                <figcaption>
+                    <a href="{{ url('case-study', ['id' => $casestudies->id]) }}" class="cases">
+                        <p> {{$casestudies->title}}</p>
+                        Read more
+                    </a>
+                </figcaption>
+
+            </figure>
+            @endforeach
+        </div>
+        <!-- <figure>
                 <div class="imgseccont">
                     <img src="{{ asset('web/images/mis-img-1.png') }}" alt="Dis" />
                 </div>
@@ -106,8 +126,8 @@
             </figure>
             <figure>
                 <div class="imgseccont">
-                    <img src="{{ asset('web/images/mis-img-3.png') }}" alt="Dis" />
-                    <!-- <a href="#" class="videobtn">
+                    <img src="{{ asset('web/images/mis-img-3.png') }}" alt="Dis" /> -->
+        <!-- <a href="#" class="videobtn">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                 <g clip-path="url(#clip0_1_123)">
@@ -121,7 +141,7 @@
               </svg>
             </span>
           </a> -->
-                </div>
+        <!-- </div>
                 <figcaption>
                     <p>Upgrading from Equipment Breakdowns of a Manufacturing Plant to Significant Cost Savings by
                         AI-Driven Maintenance on Microsoft Azure.</p>
@@ -145,8 +165,8 @@
             </figure>
             <figure>
                 <div class="imgseccont">
-                    <img src="{{ asset('web/images/mis-img-5.png') }}" alt="Dis" />
-                    <!-- <a href="#" class="videobtn">
+                    <img src="{{ asset('web/images/mis-img-5.png') }}" alt="Dis" /> -->
+        <!-- <a href="#" class="videobtn">
             <span>
               <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                 <g clip-path="url(#clip0_1_123)">
@@ -160,7 +180,7 @@
               </svg>
             </span>
           </a> -->
-                </div>
+        <!-- </div>
                 <figcaption>
                     <p> Helping Multinational Sales Organizations struggling with real-time insights with the
                         implementation of Sales Performance Dashboard</p>
@@ -183,9 +203,9 @@
                         satisfied through their personalized performance insights.</a>
 
                 </figcaption>
-            </figure>
-        </div>
+            </figure>-->
     </div>
+
 </section>
 <section class="oursolution">
     <div class="container">
@@ -213,34 +233,16 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-lg-10 mx-auto">
-                <div class="row">
+            <div class="col-lg-10 mx-auto ">
+                <div id="factsrenderhere" class="row justify-content-center">
+                    @foreach ($facts as $fact)
                     <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
-                        <h5 class="factnumber">150+</h5>
-                        <p>Tickets Delivered This Month</p>
+                        <h5 class="factnumber">{{ $fact->fact }}</h5>
+                        <p>{{ $fact->factDis }}</p>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
-                        <h5 class="factnumber">37K+</h5>
-                        <p>Active Customers Rate</p>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact last">
-                        <h5 class="factnumber">99%</h5>
-                        <p>Customer Satisfaction Rate</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-8 mx-auto">
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 boxfact border-none">
-                        <h5 class="factnumber">25</h5>
-                        <p>Expert Team Members</p>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-6 boxfact last border-none">
-                        <h5 class="factnumber">42%</h5>
-                        <p>Customers Retention Rate</p>
-                    </div>
+                    @endforeach
+
+
                 </div>
             </div>
         </div>
@@ -314,13 +316,25 @@
             </div>
         </div>
     </div>
-    <div class="owl-carousel owl-sight owl-theme">
+    <div class="owl-carousel owl-theme" id="carousel2">
+        @foreach ($insights as $insights)
         <div class="item">
+            <div class="sightcorsual"
+                style="background-image: url('{{ asset($insights->image) }}'); width: 100%; max-width: 400px; height: 500px; background-size: cover; background-position: center; overflow: hidden;">
+                <!-- You can add any content inside this div if needed -->
+            </div>
+
+            <div class="boxmember">
+                <!-- <h6><span class="dot"></span>White Paper</h6> -->
+                <h5>{{$insights->title}}</h5>
+            </div>
+        </div>
+        @endforeach
+        <!-- <div class="item">
             <div class="sightcorsual">
                 <img src="{{ asset('web/images/insight-img-1.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Advanced algorithms to ensure unparalleled accuracy and reliability in safeguarding your data</h5>
             </div>
         </div>
@@ -329,7 +343,6 @@
                 <img src="{{ asset('web/images/insight-img-2.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Crafting a smooth blend that ensures your data's integrity is rock-solid with our cutting-edge AI,
                     BI, and ML technologies.</h5>
             </div>
@@ -339,7 +352,6 @@
                 <img src="{{ asset('web/images/insight-img-3.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Adapting to evolve patterns and ensuring the highest standards of accuracy through Machine Learning,
                     refining and optimizing data processes.</h5>
             </div>
@@ -349,7 +361,6 @@
                 <img src="{{ asset('web/images/insight-img-4.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Empowering businesses to make informed decisions based on a data-driven foundation</h5>
             </div>
         </div>
@@ -358,7 +369,6 @@
                 <img src="{{ asset('web/images/insight-img-4.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Employing advanced techniques to adapt and fortify the data against evolving risks with our dynamic
                     security layers</h5>
             </div>
@@ -368,10 +378,9 @@
                 <img src="{{ asset('web/images/insight-img-4.png') }}">
             </div>
             <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
                 <h5>Assuring customer-centric approach with our data integrity services revolving around your needs</h5>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <section class="homereview">
@@ -445,4 +454,29 @@
         </div>
     </div>
 </section>
+<script>
+$(document).ready(function() {
+    $("#carousel2").owlCarousel({
+        margin: 20,
+        nav: true,
+
+        loop: true,
+        autoplayTimeout: 2000,
+        autoplayHoverPause: true,
+        autoplay: true,
+        responsive: {
+            0: {
+                items: 2
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 4
+            }
+        }
+
+    });
+});
+</script>
 @include('layouts.footer')

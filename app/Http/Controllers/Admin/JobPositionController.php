@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\JobPosition;
 use App\Models\Job;
+use Illuminate\Support\Facades\File;
 
 
 class JobPositionController extends Controller
@@ -86,4 +87,3 @@ class JobPositionController extends Controller
 
   
 }
-
