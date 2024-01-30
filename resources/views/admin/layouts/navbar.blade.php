@@ -49,13 +49,13 @@
       </li>  -->
 
             <!-- <li><a class="app-menu__item {{ request()->is('admin/dealership-submissions') ? 'active' : '' }}" href="/admin/dealership-submissions"><i class="bi bi-briefcase app-menu__icon"></i><span class="app-menu__label">Dealership Requests</span></a></li> -->
-            <li><a class="app-menu__item {{ request()->is('admin/contact-submissions') ? 'active' : '' }}"
+            <!-- <li><a class="app-menu__item {{ request()->is('admin/contact-submissions') ? 'active' : '' }}"
                     href="/admin/contact-submissions"><i class="bi bi-briefcase app-menu__icon"></i><span
-                        class="app-menu__label">Contact Submissions</span></a></li>
+                        class="app-menu__label">Contact Submissions</span></a></li> -->
             <!-- <li><a class="app-menu__item {{ request()->is('admin/message-submissions') ? 'active' : '' }}" href="/admin/message-submissions"><i class="bi bi-briefcase app-menu__icon"></i><span class="app-menu__label">Message Submissions</span></a></li> -->
-            <li><a class="app-menu__item {{ request()->is('admin/job-positions') ? 'active' : '' }}"
+            <!-- <li><a class="app-menu__item {{ request()->is('admin/job-positions') ? 'active' : '' }}"
                     href="/admin/job-positions"><i class="bi bi-briefcase app-menu__icon"></i><span
-                        class="app-menu__label">Job Positions</span></a></li>
+                        class="app-menu__label">Job Positions</span></a></li> -->
             <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
                     href="/admin/application/list"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Job Applications</span></a></li>
