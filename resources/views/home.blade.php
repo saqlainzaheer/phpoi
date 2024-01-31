@@ -12,7 +12,7 @@
         <div class="container">
             <div class="aidevelopment">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-12">
+                    <div id="headerlower" class="col-lg-12 col-md-12 col-sm-12 col-12">
                         <h3>AI for Business Intelligence </h3>
                         <p>Microsoft Fabric Integration / Azure Platform Collaboration / Copilot Assistance </p>
                     </div>
@@ -75,7 +75,7 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-150 text-center">
+        <div id="wemake" class="row  text-center">
             <h4 class="wemake"> We Make</h4>
             <!-- <p>Bringing innovation across all industries</p> -->
             <p> Idea & Design suggested.</p>
@@ -312,7 +312,7 @@
                 <h4>Latest insights</h4>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <a href="{{url('cloud-providers')}}" class="viewall">View all</a>
+                <a href="{{url('data-world')}}" class="viewall">View all</a>
             </div>
         </div>
     </div>
@@ -466,10 +466,10 @@ $(document).ready(function() {
         autoplay: true,
         responsive: {
             0: {
-                items: 2
+                items: 1
             },
-            600: {
-                items: 3
+            450: {
+                items: 2
             },
             1000: {
                 items: 4

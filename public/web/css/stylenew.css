@@ -96,7 +96,7 @@ h1 span {
     flex-grow: inherit;
 }
 .homenav a img {
-    height: 65px;
+    height: 36px;
 }
 .headercls {
     background: #fff;
@@ -364,7 +364,9 @@ h1 span {
     line-height: 50px; /* 119.048% */
     margin-bottom: 30px;
 }
-
+#wemake {
+    margin: 150px 0 0 0;
+}
 a.btnmake {
     color: #3482ad;
     font-family: Play;
@@ -1617,6 +1619,9 @@ ul.globelisting li::before {
     .beparttext h4 {
         font-size: 50px;
     }
+    .bannerslider {
+        height: 90vh;
+    }
     .homenav.navbar-expand-lg .navbar-collapse {
         position: absolute;
         top: 100%;
@@ -1678,12 +1683,46 @@ ul.globelisting li::before {
     .overvid img {
         display: table;
         margin: 0 auto;
+        margin: -180px auto -108px auto;
+        width: 80%;
+    }
+    .homeat {
+        font-weight: 500;
+        font-size: 33px;
+        text-align: center;
+        color: #3482ad;
+    }
+    .homeat a {
+        padding: 10px 20px;
+        background: #3482ad;
+        color: white;
+        border-radius: 10px;
+    }
+    .bannerslider {
+        height: 75vh;
+    }
+    .aidevelopment {
+        margin-bottom: 16px;
+    }
+    #headerlower {
+        text-align: left;
+    }
+    #headerlower h3 {
+    }
+    #headerlower p {
+        font-size: 16px;
     }
     .homeat h4 {
-        font-size: 30px;
+        font-size: 16px;
+        text-align: center;
+        line-height: 26px;
     }
     a.btnmake {
         font-size: 30px;
+    }
+
+    #wemake {
+        margin: 30px 0 0 0;
     }
     .fotcopy {
         text-align: center;
@@ -1710,6 +1749,9 @@ ul.globelisting li::before {
         color: #000;
         text-align: center;
         padding: 30px;
+        color: white;
+        position: relative;
+        bottom: 173px;
     }
     .videofaster video {
         height: auto;
@@ -1721,6 +1763,15 @@ ul.globelisting li::before {
         position: relative;
         left: 0px;
         flex-direction: column;
+    }
+    .reviewpara {
+        line-height: 155.9%;
+    }
+    .reviewdesign p {
+        font-size: 16px;
+    }
+    .homereviewbox .item {
+        padding: 0px 0px;
     }
     .reviewuser {
         padding: 40px;

@@ -23,6 +23,15 @@
     <script src="{{ asset('web/js/jquery.min.js')}}"></script>
     <script src="{{ asset('web/js/owl.carousel.min.js')}}"></script>
 </head>
+<style>
+@media (max-width: 600px) {
+    .homeat h4 {
+        line-height: 26px;
+        font-size: 16px
+    }
+
+}
+</style>
 
 <body>
     <main>
@@ -33,11 +42,11 @@
                         <div class="container-fluid">
                             <a href="{{url('/')}}"
                                 class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
-                                <div style="display:flex;align-items: center;  gap: 10px;">
+                                <div id="mainlogo" style="display:flex;align-items: center;  gap: 10px;">
 
-                                    <img src="{{ asset('web/images/mainlogo.svg')}}">
-                                    <span style="width:1px; height:55px; background:#3482AD;"></span>
-                                    <img src="{{ asset('web/images/micro.png') }}">
+                                    <img class="logo1" src="{{ asset('web/images/mainlogo.svg')}}">
+                                    <span style="width:1px; height:40px; background:#3482AD;"></span>
+                                    <img class="logo2" src="{{ asset('web/images/micro.png') }}">
                                 </div>
                             </a>
 
