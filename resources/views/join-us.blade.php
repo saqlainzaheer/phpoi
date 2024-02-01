@@ -167,8 +167,7 @@
             gap: 10px;
             display: flex;
             justify-content: center;
-            position: relative;
-            bottom: 75px;
+            margin: 15px 0;
         }
 
         .howtojoin .owl-dots .owl-dot {
