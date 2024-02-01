@@ -436,11 +436,55 @@
                 cursor: progress;
 
             }
+
+            #sampleTable tbody td:last-child {
+                display: flex;
+                justify-content: center;
+            }
+
+            @media (max-width: 600px) {
+                #sampleTable thead {
+                    display: none;
+                }
+
+                #sampleTable tbody tr {
+                    display: block;
+                    margin-bottom: 20px;
+                    border: 1px solid #ccc;
+                    border-radius: 8px;
+                    padding: 10px;
+                }
+
+                #sampleTable tbody td {
+                    display: block;
+                }
+
+                #sampleTable tbody td:first-child {
+                    font-weight: bold;
+                }
+
+                #sampleTable tbody td:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                #sampleTable tbody td:last-child {
+
+                    display: block;
+                    padding: 12px 0;
+
+                }
+
+                div.dataTables_wrapper div.dataTables_paginate ul.pagination {
+                    justify-content: flex-start !important;
+                }
+
+
+
+            }
             </style>
             <div class="table-responsive">
                 <table class="table table-hover table-bordered" id="sampleTable">
-                    <thead style="border:1px">
-
+                    <thead>
                         <tr>
                             <th>Job Title </th>
                             <th>Designation </th>
@@ -457,14 +501,12 @@
                             <td>{{ $job->designation}}</td>
                             <td>{{ $job->city}}</td>
                             <td>{{ $job->apply_last_date}}</td>
-                            <td style="display:flex; justify-content:center;">
+                            <td>
                                 <a href="{{ url('join-us/jobdetail', ['id' => $job->id]) }}" id="hoverapply" id="apply"
                                     class="btn btn-primary">Apply Now</a>
                             </td>
                         </tr>
                         @endforeach
-
-
                     </tbody>
                 </table>
             </div>
