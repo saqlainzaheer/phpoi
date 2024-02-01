@@ -1,5 +1,7 @@
 @include('layouts.header')
 
+
+
 <div class="bannerslider oneuspage">
     <div class="captionheader shadownone lefttextcap nohome">
         <div class="container">
@@ -10,17 +12,17 @@
             </div>
         </div>
     </div>
-    <img src="{{ asset('web/images//data-world-banner.png')}}">
+    <img width="100%" height="100%" src="{{ asset('web/images//data-world-banner.png')}}">
 </div>
 <section class="dataworldpart">
     <div class="container">
-        <div class="row mb-75">
+        <div class="row" id="data-w">
             <div class="col-lg-12 text-center">
                 <h4 class="mainheadingtext">Data is one of the most valuable asset</h4>
             </div>
         </div>
 
-        <div class="row mb-4">
+        <div class="row mb-4" id="data-s">
             <div class="col-lg-4">
                 <div class="joinusbox">
                     <span> <img src="{{ asset('web/images//data-analytics.svg')}}" class="iconjoin"></span>

@@ -1,4 +1,7 @@
 @include('layouts.header')
+<style>
+
+</style>
 <div class="bannerslider oneuspage">
     <div class="captionheader shadownone lefttextcap nohome">
         <div class="container">
@@ -42,12 +45,12 @@
         <div class="row mb-75">
             <div class="col-lg-6 col-md-6 col-sm-6 col-12 ">
                 <div class="wecarefor">
-                    <img src="{{ ('web/images/joinus-img01.jpg')}}" alt="Dis">
+                    <img class="img1" src="{{ ('web/images/joinus-img01.jpg')}}" alt="Dis">
                 </div>
             </div>
             <div class="col-lg-6 col-md-6 col-sm-6 col-12 p-0">
                 <div class="wecarefor">
-                    <img src="{{ ('web/images/joinus-img02.jpg')}}" alt="Dis">
+                    <img class="img2" src="{{ ('web/images/joinus-img02.jpg')}}" alt="Dis">
                 </div>
             </div>
         </div>
@@ -139,119 +142,177 @@
     .howtojoin .btn:hover {
         background: #4099c9;
     }
+
+    @media only screen and (max-width: 600px) {
+
+        .howtojoin p {
+            padding: 4px;
+        }
+
+        .howtojoin h4 {
+            font-size: 30px;
+        }
+
+        .card.card-vxuhl {
+            box-shadow: none;
+            margin-bottom: 0px;
+            padding-bottom: 0;
+        }
+
+        /* .wecarepart p {
+            font-size: 42px;
+        } */
+        .howtojoin .owl-dots {
+            /* display: block; */
+            gap: 10px;
+            display: flex;
+            justify-content: center;
+            position: relative;
+            bottom: 75px;
+        }
+
+        .howtojoin .owl-dots .owl-dot {
+            width: 15px;
+            height: 15px;
+            background: grey;
+            border-radius: 20px;
+            opacity: 0.5;
+
+        }
+
+        .howtojoin .owl-dots button.owl-dot.active {
+
+            opacity: 1;
+        }
+
+        #last {
+            gap: 15px;
+        }
+    }
     </style>
     <section class="howtojoin">
-        <div class="container">
-            <div class="row mb-75">
-                <div style="text-align:center;">
+        <div class="joinnav">
+
+            <div class="container">
+                <div class="row mb-75" style="text-align:center;">
+
                     <h4>How to become a member of DIS?</h4>
-                    <p>Excited to unleash and refine your talents at DIS? We're here to guide you through each step of
+                    <p id="howtojoinp">Excited to unleash and refine your talents at DIS? We're here to guide you
+                        through
+                        each step of
                         the application process, paving the way for you to seamlessly transition into a valued member of
                         the DIS team.</p>
+
+
                 </div>
-
             </div>
-        </div>
-        <div class="owl-carousel owl-theme" id="carousel1">
-            <div class="item">
-                <div id="cardjoin" class="card card-vxuhl">
-                    <p class="text text-align-center text-kwmgk">
-                        Level 1
-                    </p>
+            <div class="owl-carousel owl-theme" id="carousel1">
+                <div class="item">
+                    <div id="cardjoin" class="card card-vxuhl">
+                        <span class="text text-align-center text-kwmgk">
+                            Level 1
+                        </span>
 
-                    <h3 class="text text-align-center text-rz3fg">
+                        <h3 class="text text-align-center text-rz3fg">
 
 
-                        Your application
+                            Your application
 
-                    </h3>
-                    <div class="ProseMirror">
-                        <p>You found an opportunity that suits you and your abilities? Perfect! Use our application form
-                            to send us your resume and credentials. Once we received your documents, you will get a
-                            confirmation via email..
-                        </p>
+                        </h3>
+                        <div class="ProseMirror">
+                            <p>You found an opportunity that suits you and your abilities? Perfect! Use our application
+                                form
+                                to send us your resume and credentials. Once we received your documents, you will get a
+                                confirmation via email..
+                            </p>
+                        </div>
+
                     </div>
 
+
+
                 </div>
+                <div class="item">
+                    <div id="cardjoin" class="card card-vxuhl">
+                        <span class="text text-align-center text-kwmgk">
+                            Level 2
+                        </span>
+
+                        <h3 class="text text-align-center text-rz3fg">
 
 
+                            Our reply
 
-            </div>
-            <div class="item">
-                <div id="cardjoin" class="card card-vxuhl">
-                    <p class="text text-align-center text-kwmgk">
-                        Level 2
-                    </p>
+                        </h3>
+                        <div class="ProseMirror">
+                            <p>Thank you for submitting your application. We will carefully review your credentials and
+                                aim
+                                to get back to you at the earliest. If your profile aligns with our requirements, we'll
+                                reach out to schedule an interview.
+                            </p>
+                        </div>
 
-                    <h3 class="text text-align-center text-rz3fg">
-
-
-                        Our reply
-
-                    </h3>
-                    <div class="ProseMirror">
-                        <p>Thank you for submitting your application. We will carefully review your credentials and aim
-                            to get back to you at the earliest. If your profile aligns with our requirements, we'll
-                            reach out to schedule an interview.
-                        </p>
                     </div>
 
+
+
                 </div>
+                <div class="item">
+                    <div id="cardjoin" class="card card-vxuhl">
+                        <span class="text text-align-center text-kwmgk">
+                            Level 3
+                        </span>
+
+                        <h3 class="text text-align-center text-rz3fg">
 
 
+                            Your interview
+                        </h3>
+                        <div class="ProseMirror">
+                            <p>You founCurious to know if we're the right fit for each other? The interview is the
+                                perfect
+                                opportunity to explore alignment with your expectations, discuss job requirements, and
+                                delve
+                                into the workplace environment. Plus, if multiple DIS companies catch your interest,
+                                you're
+                                welcome to participate in several interviews!
+                            </p>
+                        </div>
 
-            </div>
-            <div class="item">
-                <div id="cardjoin" class="card card-vxuhl">
-                    <p class="text text-align-center text-kwmgk">
-                        Level 3
-                    </p>
-
-                    <h3 class="text text-align-center text-rz3fg">
-
-
-                        Your interview
-                    </h3>
-                    <div class="ProseMirror">
-                        <p>You founCurious to know if we're the right fit for each other? The interview is the perfect
-                            opportunity to explore alignment with your expectations, discuss job requirements, and delve
-                            into the workplace environment. Plus, if multiple DIS companies catch your interest, you're
-                            welcome to participate in several interviews!
-                        </p>
                     </div>
 
+
+
                 </div>
+                <div class="item">
+                    <div id="cardjoin" class="card card-vxuhl">
+                        <span class="text text-align-center text-kwmgk">
+                            The Final
+                        </span>
+
+                        <h3 class="text text-align-center text-rz3fg">
 
 
+                            You at DIS
+                        </h3>
+                        <div class="ProseMirror">
+                            <p>Curious to know if we're the right fit for each other? The interview is the perfect
+                                opportunity to explore alignment with your expectations, discuss job requirements, and
+                                delve
+                                into the workplace environment. Plus, if multiple DIS companies catch your interest,
+                                you're
+                                welcome to participate in several interviews!
+                            </p>
+                        </div>
 
-            </div>
-            <div class="item">
-                <div id="cardjoin" class="card card-vxuhl">
-                    <p class="text text-align-center text-kwmgk">
-                        The Final
-                    </p>
-
-                    <h3 class="text text-align-center text-rz3fg">
-
-
-                        You at DIS
-                    </h3>
-                    <div class="ProseMirror">
-                        <p>Curious to know if we're the right fit for each other? The interview is the perfect
-                            opportunity to explore alignment with your expectations, discuss job requirements, and delve
-                            into the workplace environment. Plus, if multiple DIS companies catch your interest, you're
-                            welcome to participate in several interviews!
-                        </p>
                     </div>
 
+
+
                 </div>
 
 
-
-            </div>
-
-
-            <!-- <div class="item">
+                <!-- <div class="item">
                 <div class="sightcorsual">
                     <img src="{{ asset('web/images/insight-img-4.png') }}">
                 </div>
@@ -261,10 +322,12 @@
                     </h5>
                 </div>
             </div> -->
+            </div>
+            <div style="display:flex; justify-content:center;">
+                <a href="#current_job" id="hoverapply" id="apply" class="btn btn-primary">Apply Now</a>
+            </div>
         </div>
-        <div style="display:flex; justify-content:center;">
-            <a href="#current_job" id="hoverapply" id="apply" class="btn btn-primary">Apply Now</a>
-        </div>
+
     </section>
     <section class="wecarepart">
         <div class="container">
@@ -273,7 +336,7 @@
                     <h4 class="mainheadingtext">Values that define us</h4>
                 </div>
             </div>
-            <div class="row mb-4">
+            <div class="row mb-4" id="last">
                 <div class="col-lg-4">
                     <div class="joinusbox">
                         <span> <img src="{{ ('web/images/joinus-icon01.svg')}}" class="iconjoin"></span>
@@ -299,7 +362,7 @@
                     </div>
                 </div>
             </div>
-            <div class="row mb-75">
+            <div class="row mb-75" id="last">
                 <div class="col-lg-4">
                     <div class="joinusbox">
                         <span> <img src="{{ ('web/images/joinus-icon04.svg')}}" class="iconjoin"></span>
@@ -444,8 +507,21 @@
             items: 1,
             loop: true,
             nav: true,
+            dots: true,
             autoplayTimeout: 3000,
             autoplayHoverPause: true,
+            responsive: {
+                0: {
+                    nav: false,
+                    dotsEach: true
+                },
+                600: {
+                    nav: true,
+                    dotsEach: false
+
+                },
+
+            }
 
         });
     });

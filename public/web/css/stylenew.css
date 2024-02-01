@@ -807,7 +807,7 @@ a.viewall {
     background: #000;
 }
 footer {
-    padding: 100px 0px;
+    padding: 100px 0 26px 0;
     color: #fff;
 }
 footer h6 {
@@ -847,6 +847,7 @@ ul.fotnab li a:hover {
     font-family: Play;
     font-size: 14px;
     font-style: normal;
+    padding: 26px 0 0 0;
     font-weight: 400;
     line-height: 22px; /* 157.143% */
     margin-bottom: 0px;
@@ -872,6 +873,9 @@ ul.fotsocial li a {
 }
 ul.fotsocial li a:hover {
     background: #2563eb;
+}
+#data-w {
+    margin-botom: 75px;
 }
 .rc {
     width: 700px;
@@ -1427,7 +1431,9 @@ ul.fotsocial li a:hover {
 .jobroleabout {
     padding: 75px 0 150px;
 }
-
+#whatdo {
+    margin: 75px;
+}
 .aboutrolepart {
     padding: 70px;
     background: #f9f9f9;
@@ -1637,6 +1643,159 @@ ul.globelisting li::before {
 }
 
 @media only screen and (max-width: 600px) {
+    .weculture {
+        padding: 0;
+    }
+    .wecareimgfull {
+        margin: 0;
+    }
+    .wecareimgfull img {
+        width: 95%;
+        margin: auto;
+    }
+    .weculture p {
+        text-align: center;
+    }
+    #values {
+        flex-direction: column-reverse;
+        margin: 40px 0 0 0;
+    }
+    #values h3 {
+        font-family: Play;
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 44px;
+        letter-spacing: -0.72px;
+    }
+    .wemake {
+        margin: 42px 0 30px 0;
+    }
+    .weculture p {
+        margin: 0 0 32px 0;
+    }
+    #values p {
+        text-align: center;
+        color: #797979;
+        font-family: Play;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 149.4%;
+    }
+    .wecarepart p {
+        text-align: center;
+        color: black;
+        font-family: Play;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 149.4%;
+    }
+    .wecarefor .img1 {
+        height: 370px;
+        width: 63%;
+        margin-left: auto;
+        border-radius: 20px;
+    }
+    #whatdo {
+        margin: 0;
+    }
+    .wecarefor .img2 {
+        height: 370px;
+        width: 62%;
+        position: relative;
+        border-radius: 20px;
+        bottom: 85px;
+        left: 19px;
+    }
+
+    /* servicespaje */
+    #partnerlogo {
+        gap: 10px;
+    }
+    ul.globelisting li {
+        padding: 5px 0;
+    }
+
+    .imgcall {
+        padding: 0px 5px;
+    }
+    .imgcall img {
+        border-radius: 15px;
+    }
+    .cloudimgrev h3 {
+        font-size: 30.375px;
+    }
+    .nohome h1 {
+        font-size: 56px;
+    }
+    .wecarepart {
+        padding: 60px 0px;
+    }
+    .nohome h1 span {
+        font-size: 45px;
+    }
+    .nohome h1 {
+        font-size: 43px;
+    }
+    .mainheadingtext {
+        font-size: 38px;
+    }
+    .joinusbox span {
+        width: 55px;
+        height: 55px;
+        padding: 7px;
+        border-radius: 12px;
+        margin-bottom: 8px;
+    }
+    .joinusbox h3 {
+        color: #242331;
+        font-family: Play;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+
+        margin-bottom: 8px;
+    }
+    .dataworldpart {
+        padding: 42px 0px;
+    }
+    #data-w {
+        margin-bottom: 20px;
+    }
+    #data-s {
+        gap: 20px;
+    }
+    .contactbond h4.cloudcontactheading {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .contactbond h4.cloudcontactheading span {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .cloudcontactimg img {
+        border-radius: 10px;
+        margin-bottom: 35px;
+    }
+    .joinusbox p {
+        font-size: 14px;
+        margin-bottom: 0px;
+    }
+    #partnerlogo img {
+        margin: auto;
+    }
+    .globeheading h4 {
+        color: #04242d;
+        font-family: Play;
+        font-size: 40.969px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 42px;
+    }
+
     .wemakeinn {
         padding: 50px 0px;
         text-align: center;

@@ -1,6 +1,11 @@
 @include('layouts.header')
+<style>
+.wecarepart p {
+    text-align: left;
+}
+</style>
 <div class="bannerslider oneuspage">
-    <div class="captionheader shadownone lefttextcap nohome">
+    <div class="captionheader shadownone lefttextcap nohome" style="height:57vh;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-6">
@@ -9,7 +14,7 @@
             </div>
         </div>
     </div>
-    <img src="{{ asset('web/images/services-banner.png') }}">
+    <img height="100%" width="100%" src="{{ asset('web/images/services-banner.png') }}">
 </div>
 
 <section class="dataworldpart">
@@ -79,7 +84,7 @@
                 <a href="{{url('contact-us')}}" class="btn btn-primary">Talk to an Expert</a>
             </div>
         </div>
-        <div class="row">
+        <div id="partnerlogo" class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-12 ">
                 <img src="{{ asset('web/images/cloud-micro-01.png') }}">
             </div>

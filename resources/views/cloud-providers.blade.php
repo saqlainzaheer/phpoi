@@ -1,4 +1,48 @@
 @include('layouts.header')
+<style>
+@media only screen and (max-width: 600px) {
+
+    .wecarepart p {
+        margin: 15px 0px 20px 0;
+        text-align: left;
+    }
+
+    ul.globelisting li {
+        line-height: 27px;
+    }
+
+    .globeheading {
+        background: #f4f8fc;
+        padding: 40px 0;
+    }
+
+    .wecarepart {
+        padding: 0px 0px;
+    }
+
+    #partnerlogo {
+        margin-bottom: 30px;
+    }
+
+    .cloudimgrev p {
+        font-size: 20px;
+        line-height: 41px;
+    }
+
+    .cloudimgrev h3 {
+        margin-top: 30px;
+    }
+
+    .cloudimgrev li {
+        line-height: 42px;
+        font-size: 21px;
+    }
+
+    .globeheading h4 span {
+        font-size: 20px
+    }
+}
+</style>
 <div class="bannerslider oneuspage">
     <div class="captionheader shadownone lefttextcap nohome">
         <div class="container">
@@ -9,7 +53,7 @@
             </div>
         </div>
     </div>
-    <img src="{{ asset('web/images/cloudprovider-banner.png') }}">
+    <img width="100%" height="100%" src="{{ asset('web/images/cloudprovider-banner.png') }}">
 </div>
 <section class="wecarepart">
     <div class="container">
@@ -35,10 +79,10 @@
                         Partner,
                         dedicated to benefiting our clients through technology.</li>
                 </ul>
-                <a href="{{url('contact-us')}}" class="btn btn-primary">Talk to an Expert</a>
+                <a href="#contactexp" class="btn btn-primary">Talk to an Expert</a>
             </div>
         </div>
-        <div class="row">
+        <div id="partnerlogo" class="row">
             <div class="col-lg-3 col-md-3 col-sm-6 col-12 ">
                 <img src="{{ asset('web/images/cloud-micro-01.png') }}">
             </div>
@@ -108,7 +152,7 @@
         </div>
     </div>
 </section>
-<section class="buildfaster pt-0">
+<section id="casestudiess" class="buildfaster pt-0">
     <div class="container">
         <div class="row text-center">
             <h4 class="wemake"> Case studies & best practices</h4>
@@ -233,7 +277,7 @@
     </div>
 
 </section>
-<section class="contactpart pt-0">
+<section id="contactexp" class="contactpart pt-0">
     <div class="container">
         <div class="contactbond">
             <div class="row">
