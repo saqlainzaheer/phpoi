@@ -29,7 +29,7 @@ class InsightController extends Controller
 
         $validatedData = $request->validate([
             'title' => 'required|max:255',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
 
         if ($request->hasFile('image') && $request->file('image')->isValid()) {
@@ -42,6 +42,7 @@ class InsightController extends Controller
             // Store the post in the database using Query Builder
             $postId = DB::table('insights')->insertGetId([
                 'title' => $request->title,
+                'description' => $request->description,
                 'image' => 'web/images/insight_img/' . $imageName,
             
             ]);
@@ -91,7 +92,7 @@ class InsightController extends Controller
         // Validation (similar to store method)
         $validatedData = $request->validate([
             'title' => 'required|max:255',
-            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg,webp|max:2048',
         ]);
         
         // Find the post by ID
@@ -118,6 +119,7 @@ class InsightController extends Controller
             // Update post data in the database
             DB::table('insights')->where('id', $id)->update([
                 'title' => $validatedData['title'],
+                'description' => $request->description,
                 'image' => 'web/images/insight_img/' . $imageName, // Store the relative path in the database
             ]);
         
@@ -127,6 +129,7 @@ class InsightController extends Controller
         // No new image uploaded, update post data without changing the image
         DB::table('insights')->where('id', $id)->update([
             'title' => $validatedData['title'],
+            'description' => $request->description,
         ]);
         
         return redirect('/admin/insight/list')->with('success', 'Insights updated successfully!');

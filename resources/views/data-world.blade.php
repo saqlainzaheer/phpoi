@@ -1,83 +1,134 @@
 @include('layouts.header')
 
-
-
-<div class="bannerslider oneuspage">
-    <div class="captionheader shadownone lefttextcap nohome">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <h1>Data <span>World</span></h1>
-                </div>
-            </div>
-        </div>
-    </div>
-    <img width="100%" height="100%" src="{{ asset('web/images//data-world-banner.png')}}">
-</div>
-<section class="dataworldpart">
-    <div class="container">
-        <div class="row" id="data-w">
-            <div class="col-lg-12 text-center">
-                <h4 class="mainheadingtext">Data is one of the most valuable asset</h4>
-            </div>
-        </div>
-
-        <div class="row mb-4" id="data-s">
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-analytics.svg')}}" class="iconjoin"></span>
-                    <h3>Data & Computing</h3>
-                    <p>Expertise in extracting value from large datasets through the integration and management of
-                        cloud-based solutions.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-class.svg')}}" class="iconjoin"></span>
-                    <h3>ML & AI Operations</h3>
-                    <p>Implementing intelligent algorithms by incorporating Machine Learning and Artificial Intelligence
-                        for advanced decision-making.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-backup.svg')}}" class="iconjoin"></span>
-                    <h3>Data Security</h3>
-                    <p>Ensuring strong measures to secure your valuable data by partnering with Microsoft Azure.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mb-4">
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-vis-3.svg')}}" class="iconjoin"></span>
-                    <h3>Data Engineering</h3>
-                    <p>Tailoring the power of data to derive meaningful insights by optimizing your computing
-                        infrastructure.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-refinery-reference.svg')}}" class="iconjoin"></span>
-                    <h3>Data Streaming & Event</h3>
-                    <p>Transmitting data as it is generated in real time, and capturing events for later analysis &
-                        retrieval.</p>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="joinusbox">
-                    <span> <img src="{{ asset('web/images//data-vis-1.svg')}}" class="iconjoin"></span>
-                    <h3>Data Story Telling</h3>
-                    <p>Crafting complex data in a way that tells a clear & coherent story through visually engaging
-                        narratives to enhance data presence.</p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</section>
 <style>
+.hero {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 20px;
+    flex-wrap: wrap;
+    min-height: 300px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: row;
+    height: 100%;
+    /* backgro  und: radial-gradient(ellipse at center, rgba(255, 112, 2, 0.1) 0%, rgba(98, 51, 0, 0) 70%), radial-gradient(ellipse at center, rgba(255, 111, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%), radial-gradient(ellipse at center, rgba(255, 191, 0, 0.1) 0%, rgba(200, 77, 6, 0) 70%) #ffffff; */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 255, 0.1) 0%, rgba(0, 191, 255, 0) 70%), radial-gradient(ellipse at center, rgba(173, 216, 230, 0.05) 0%, rgba(0, 0, 255, 0) 70%), radial-gradient(ellipse at center, rgba(173, 216, 230, 0.1) 0%, rgba(0, 191, 255, 0) 70%) #ffffff;
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1200px 1200px, 1200px 1200px, 1200px 1200px;
+    background-attachment: fixed;
+    animation: bganimation 15s infinite;
+}
+
+.hero__content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    height: 100%;
+}
+
+.hero__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-family: "Sora", sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 60px;
+    line-height: 70px;
+}
+
+.hero__info hr {
+    margin-bottom: 30px;
+    width: 210px;
+    color: #3881a9;
+    background-color: #3881a9;
+    height: 2px;
+    border: none;
+}
+
+@keyframes bganimation {
+    50% {
+        background-position-x: 700px;
+    }
+}
+
+.hero__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.hero__description {
+    max-width: 800px;
+    font-size: 22px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: play;
+    color: #797979;
+
+}
+
+
+
+/* contat us */
+
+.contact__us {
+    background-color: rgba(20, 20, 20, 0.5647058824);
+    background-blend-mode: color;
+    background-size: cover;
+    padding: 120px 0;
+}
+
+
+.contact__us.data--analytic {
+    background-image: url('{{ asset('web/images/data-analytic.webp') }}');
+
+
+}
+
+.contact__us-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.contact__us-title {
+    color: #fff;
+    margin-bottom: 65px;
+    line-height: 130%;
+    max-width: 1100px;
+    margin-inline: auto;
+}
+
+.contact__us-button {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 27px;
+    border-radius: 0;
+    padding: 14px 28px;
+    color: #fff;
+    width: auto;
+    margin-inline: auto;
+    background-color: #3881a9;
+    border-radius: 10px;
+}
+
+.contact__us-button:hover {
+    background-color: #3989b5;
+}
+
+.dataworldpart {
+    padding: 75px 0px;
+}
+
+
+/* latestinsights  */
+
 $color-primary-white: rgb(240, 240, 240);
 
 main {
@@ -159,159 +210,474 @@ main {
 .material-symbols-outlined {
     vertical-align: middle;
 }
-</style>
-<section class="buildfaster pt-0" id="latesinsight">
-    <div class="container">
 
-        <div class="row text-center">
-            <h4 class="wemake"> Latest Insights</h4>
-            <p>Bringing innovation across all industries</p>
-        </div>
-        <div class="maincontainer">
+#databenifits .headp,
+#dataexperties .headp {
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+    margin-bottom: 60px;
+
+}
+
+/* -----insights */
+.services__card {
+    border: 1px solid #191b1d;
+
+}
+
+.services__card-imgbox {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* Ensure that the image does not overflow the box */
+    position: relative;
+}
+
+.services__card-imgbox img {
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 100%;
+    /* Ensure the image fills the entire height of its container */
+    object-fit: cover;
+    /* Maintain the aspect ratio while filling the box */
+    display: block;
+    /* Remove any default inline display */
+    position: absolute;
+    /* Position the image absolutely */
+    top: 0;
+    /* Align the image to the top */
+    left: 0;
+}
+
+.services__card-info {
+    padding: 40px;
+}
+
+.services__card-title {
+    margin-bottom: 15px;
+
+    font-style: normal;
+}
+
+.services__card.swiper-slide {
+    height: 100%;
+}
+
+.services__card-description {
+
+    color: #2e2e2e;
+    padding-bottom: 18px;
+}
+</style>
+
+<div class="bannerslider oneuspage">
+    <div class="captionheader shadownone lefttextcap nohome">
+        <div class="container">
             <div class="row">
-                @foreach ($insights as $insight)
-                <main style="margin:0 10px 20px 0;">
-                    <div class="card"
-                        style="background-image:linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('{{ asset($insight->image) }}'); url('{{ asset($insight->image) }}'); width: 100%; max-width: 400px; height: 350px; background-size: cover; background-position: center; overflow: hidden;">
-                        <div class="card-content">
-                            <h2 style=" width: 80%;overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">
-                                {{ $insight->title }}</h2>
-                            <p>{{ $insight->title }}</p>
-                        </div>
-                    </div>
-                </main>
-                @endforeach
+                <div class="col-lg-6">
+                    <h1>Data <span>World</span></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <img width="100%" height="100%" src="{{ asset('web/images//data-world-banner.png')}}">
+</div>
+<!-- --- header section -->
+<section>
+
+    <div class="hero services--hero" id="hero">
+
+        <div class="container">
+            <div class="hero__content">
+
+                <div class="hero__info" id="hero--info">
+                    <h3 class="mainheadingtext" style="text-align:left;">Business intelligence</h3>
+                    <hr>
+                    <p class="hero__description">At Data Integrity Services (DIS), we provide an extensive array of
+                        business intelligence services, comprising BI development, BI consulting, custom development, BI
+                        support and maintenance, and self-service solution creation, among others. Our experts have
+                        helped numerous clients enhance their operational processes and attain fresh business insights.
+                        To learn more about our offerings, please refer to the information below.
+
+
+
+
+
+                    </p>
+                </div>
             </div>
 
-
-            <!-- <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images//data-world-img-1.png')}}" alt="Dis">
-                </div>
-                <figcaption>
-                    <p> DIS Reduces 20% in Supply Chain inefficiencies for a Global Retail Chain with Unified Data
-                        Platform and enhanced decision-making.</p>
-                    <a href="{{URL('/study/dis-reduces-supply-chain-inefficiencies')}}" class="caseset"><span></span>
-                        Read more</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont">
-
-                    <img src="{{ asset('web/images//data-world-img-4.png')}}" alt="Dis">
-                </div>
-                <figcaption>
-                    <p> DIS Saves a Large Financial Institution by securing their data through Cloud Migration.</p>
-                    <a href="{{URL('/study/dis-saves-large-financial-institution')}}" class="caseset"><span></span> Read
-                        more</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images//data-world-img-2.png')}}" alt="Dis">
-
-
-                </div>
-                <figcaption>
-                    <p> Upgrading from Equipment Breakdowns of a Manufacturing Plant to Significant Cost Savings by
-                        AI-Driven Maintenance on Microsoft Azure.
-                    </p>
-                    <a href="{{URL('/study/upgrading-from-equipment-breakdowns')}}" class="caseset"><span></span> Read
-                        more</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont"> <img src="{{ asset('web/images//data-world-img-5.png')}}" alt="Dis"></div>
-                <figcaption>
-                    <p>DIS Streamlines Customer Interactions of an MNC by Customer Relationship Management (CRM),
-                        powered by Microsoft Azure.</p>
-                    <a href="{{URL('/study/dis-streamlines-customer-interactions')}}" class="caseset"><span></span> Read
-                        more</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images//data-world-img-3.png')}}" alt="Dis">
-                    <a href="#" class="videobtn">
-                        <span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17"
-                                fill="none">
-                                <g clip-path="url(#clip0_1_123)">
-                                    <path
-                                        d="M1.14497 1.20377L12.1028 7.86114C12.1813 7.90902 12.2465 7.97746 12.2917 8.05967C12.337 8.14188 12.3608 8.235 12.3608 8.32976C12.3608 8.42453 12.337 8.51764 12.2917 8.59985C12.2465 8.68207 12.1813 8.75051 12.1028 8.79839L1.14497 15.4558C1.06558 15.504 0.975355 15.5296 0.883435 15.5298C0.791515 15.53 0.70117 15.505 0.621557 15.4571C0.541944 15.4092 0.475892 15.3403 0.430096 15.2573C0.384301 15.1743 0.360389 15.0802 0.360784 14.9845V1.67294C0.360757 1.57739 0.384937 1.48353 0.430883 1.40083C0.476829 1.31813 0.542913 1.24952 0.622464 1.20192C0.702015 1.15433 0.792216 1.12944 0.883958 1.12976C0.975701 1.13009 1.06574 1.15562 1.14497 1.20377Z"
-                                        fill="white"></path>
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_1_123">
-                                        <rect width="13" height="16" fill="white"
-                                            transform="translate(0.160095 0.329956)"></rect>
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </span>
-                    </a>
-                </div>
-                <figcaption>
-                    <p>Helping Multinational Sales Organizations struggling with real-time insights with the
-                        implementation of Sales Performance Dashboard.</p>
-                    <a href="{{URL('/study/helping-multinational-sales-organizations')}}" class="caseset"><span></span>
-                        Read more</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont"> <img src="{{ asset('web/images//data-world-img-6.png')}}" alt="Dis"></div>
-                <figcaption>
-                    <p>Reduced 30% in Onboarding Time and Paperwork of a large HR Management with Power Automation and
-                        Azure AI Services.</p>
-                    <a href="{{URL('/study/reduced-onboarding-time-and-paperwork')}}" class="caseset"><span></span> Read
-                        more</a>
-                </figcaption>
-            </figure> -->
         </div>
+
+    </div>
+    <div class="contact__us data--analytic">
+        <div class="container">
+            <div class="contact__us-content" id="contact-us-header">
+                <h3 class="contact__us-title ">
+                    Contact our experts to learn about our services, analyze and visualize your data, and
+                    create a customized BI solution that will help your business grow while saving you money
+                    and time.
+                </h3>
+                <a href="" class="contact__us-button">Contact us</a>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+<section class="dataworldpart" style=" background: #e5effa;">
+    <div class="container">
+        <div class="row" id="data-w">
+            <div class="col-lg-12 text-center">
+                <h4 style="padding-bottom:50px; max-width:600px; margin:auto;" class="mainheadingtext">Data is one of
+                    the
+                    most valuable
+                    asset</h4>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="data-s">
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-analytics.svg')}}" class="iconjoin"></span>
+                    <h3>Data & Computing</h3>
+                    <p>Expertise in extracting value from large datasets through the integration and management of
+                        cloud-based solutions.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-class.svg')}}" class="iconjoin"></span>
+                    <h3>ML & AI Operations</h3>
+                    <p>Implementing intelligent algorithms by incorporating Machine Learning and Artificial Intelligence
+                        for advanced decision-making.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-backup.svg')}}" class="iconjoin"></span>
+                    <h3>Data Security</h3>
+                    <p>Ensuring strong measures to secure your valuable data by partnering with Microsoft Azure.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4" id="data-s">
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-vis-3.svg')}}" class="iconjoin"></span>
+                    <h3>Data Engineering</h3>
+                    <p>Tailoring the power of data to derive meaningful insights by optimizing your computing
+                        infrastructure.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-refinery-reference.svg')}}" class="iconjoin"></span>
+                    <h3>Data Streaming & Event</h3>
+                    <p>Transmitting data as it is generated in real time, and capturing events for later analysis &
+                        retrieval.</p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="joinusbox">
+                    <span> <img src="{{ asset('web/images//data-vis-1.svg')}}" class="iconjoin"></span>
+                    <h3>Data Story Telling</h3>
+                    <p>Crafting complex data in a way that tells a clear & coherent story through visually engaging
+                        narratives to enhance data presence.</p>
+                </div>
+            </div>
+        </div>
+
     </div>
 </section>
 
 
-<!-- <section class="latestinsights">
+<div class="services__main">
     <div class="container">
-        <div class="row mb-75">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <h4>Latest insights</h4>
-            </div>
-
-        </div>
-
-        <div class="owl-carousel owl-dataworld owl-theme">
-            <div class="item">
-                <div class="sightcorsual">
-                    <img src="{{ asset('web/images//data-world-img-7.png')}}">
-                </div>
-                <div class="boxmember">
-                    <h6><span class="dot"></span>White Paper</h6>
-                    <h5>Unleashing the full potential of RPA with cloud computing</h5>
-                </div>
-            </div>
-            <div class="item">
-                <div class="sightcorsual">
-                    <img src="{{ asset('web/images//data-world-img-8.png')}}">
-                </div>
-                <div class="boxmember">
-                    <h6><span class="dot"></span>White Paper</h6>
-                    <h5>Unleashing the full potential of RPA with cloud computing</h5>
-                </div>
-            </div>
-
-
-
-
-
-
-        </div>
-
 
     </div>
+</div>
+<section class="buildfaster pt-25" id="latesinsight">
+    <div class="container">
 
-</section> -->
+        <div class="row text-center">
+            <h4 class="wemake  mainheadingtext"> Latest Insights</h4>
+            <p class="pb-3 " style="font-size:18px;">Bringing innovation across all industries</p>
+        </div>
+        <div class="swiper services--swiper">
+
+            <div class="services__cards  swiper-wrapper">
+
+
+
+
+                @foreach ($insights as $insight)
+
+                <div class="services__card swiper-slide">
+                    <div class="services__card-imgbox">
+                        <img src="{{ asset($insight->image) }}" alt="services">
+                    </div>
+                    <div class="services__card-info" id="services-card-1">
+                        <h4 class="services__card-title"> {{ $insight->title }}</h4>
+                        <p class="services__card-description">{{ $insight->description }}</p>
+                    </div>
+                </div>
+                @endforeach
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="databenifits">
+    <div class="container">
+        <div class="row mb-75">
+            <div class="col-lg-12 text-center">
+                <h4 class="mainheadingtext" style="margin-bottom: 30px;">
+                    Benefits of business intelligence and analytics</h4>
+                <p class="headp">
+                    When deployed effectively, business intelligence solutions offer a multitude of benefits to business
+                    owners, including enhanced organizational efficiency, dependable data, improved customer experience,
+                    and high-quality data analysis. In the sections that follow, we will outline some of the most common
+                    advantages of adopting a business intelligence approach.
+
+
+
+
+
+
+
+
+                </p>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+
+            <div class="col-lg-6 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/bicon-1.svg') }}" class="iconjoin"></div>
+                    <h3>Enhanced Organizational Efficiency</h3>
+                    <p> BI solutions can significantly improve the accuracy of business development scenarios and enable
+                        companies to allocate their resources more efficiently by processing real-time and historical
+                        data.</p>
+                </div>
+            </div>
+
+            <div class="col-lg-6 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/bicon-2.svg') }}" class="iconjoin"></div>
+                    <h3>Structured Reliable Data</h3>
+                    <p>Rather than utilizing multiple software tools for disparate data sources, business intelligence
+                        and analytics solutions amalgamate, structure, and visualize data for further analysis.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/bicon-3.svg') }}" class="iconjoin"></div>
+                    <h3>Improved Customer Satisfactio</h3>
+                    <p>BI technologies quickly identify any breaches in customer service and offer ways to rectify them
+                        once implemented, resulting in more satisfied customers.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/bicon-4.svg') }}" class="iconjoin"></div>
+                    <h3>Fast and Quality Data Analysis</h3>
+                    <p>BI platforms can rapidly process substantial volumes of data, enabling business owners to
+                        promptly locate relevant information and make informed decisions.</p>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</section>
+<style>
+#alllist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+    min-height: 100vh;
+}
+
+.list {
+    position: relative;
+}
+
+.list h2 {
+    color: black;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.list ul {
+    position: relative;
+}
+
+.list ul li {
+    position: relative;
+    left: 0;
+    color: #797979;
+    list-style: none;
+    margin: 4px 0;
+    border-left: 2px solid #43a0d3;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+.list ul li:hover {
+    left: 10px;
+}
+
+.list ul li span {
+    position: relative;
+    padding: 8px;
+    font-size: 20px;
+    padding-left: 12px;
+    display: inline-block;
+    z-index: 1;
+    transition: 0.5s;
+}
+
+.list ul li:hover span {
+    color: white;
+}
+
+.list ul li:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #43a0d3;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: 0.5s;
+}
+
+.list ul li:hover:before {
+    transform: scaleX(1);
+}
+</style>
+<section id="dataexperties">
+    <div class="container">
+        <div class="row mb-75">
+            <div class="col-lg-12 text-center">
+                <h4 class="mainheadingtext" style="margin-bottom: 30px;">
+                    Data visualization benefits</h4>
+                <p class="headp">
+                    Sophisticated data analytics and visualization techniques are highly effective in
+                    enhancing business performance and forecasting potential risks. The following are
+                    main benefits of visualization.
+                </p>
+            </div>
+        </div>
+        <div id="alllis">
+
+
+            <div class="row mb-4">
+                <div class="col-lg-6">
+
+                    <div class="list">
+                        <h2>Our <span style="color:#43a0d3;">expertise</span></h2>
+                        <ul>
+                            <li><span>DCentralized Data Repository for Financial and Transactional Information.</span>
+                            </li>
+                            <li><span>Self-Service Reporting, Dashboards and Analytics.</span></li>
+                            <li><span>Centralized Data Repository for Financial and Transactional Information.</span>
+                            </li>
+                            <li><span>Replace Legacy or Deficient Technology.</span></li>
+                            <li><span>Build Optimized Data Sets for Specific and Targeted Needs</span></li>
+                            <li><span>Enable Near Real-time Analytics with Enterprise Data Services.</span></li>
+                            <li><span>Design of Business Intelligence and Information Delivery Systems.</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="list">
+                        <h2>Data <span style="color:#43a0d3;">Management</span></h2>
+                        <ul>
+                            <li><span>Data Conversion</span></li>
+                            <li><span>Data Mapping</span></li>
+                            <li><span>Data Cleaning</span></li>
+                            <li><span>Data Discovery</span></li>
+                            <li><span>Data Analysis and Validation</span></li>
+                            <li><span>Data Migration</span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mb-4">
+
+                <div class="col-lg-12">
+
+                    <div class="list">
+                        <h2>Data <span style="color:#43a0d3;">Warehousing</span></h2>
+                        <ul>
+                            <li><span>Cloud Data Warehouses</span></li>
+                            <li><span>Snowflake</span></li>
+                            <li><span>On-premise to Cloud Migration Solutions.</span></li>
+                            <li><span>On-premise and Cloud DataWarehouse Architecture Solutions.</span></li>
+                            <li><span>DataWarehouse that supports self-service reporting, Dashboards and
+                                    analytics.</span></li>
+                            <li><span>Microsoft Azure (Azure SQL Database, Azure AD, Subscriptions, Resource Groups,
+                                    Azure Data Lake, Azure Blob Storage, Azure Synapse, Azure Analysis Services)</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row mb-4">
+
+
+                <div class="col-lg-6">
+
+                    <div class="list">
+                        <h2>Data<span style="color:#43a0d3;"> Ingestion</span></h2>
+                        <ul>
+                            <li><span>We implement ETL and ELT solutions</span></li>
+                            <li><span>Data Engineering Tools: MS SQL Server, SQL Server Integration Services, Azure Data
+                                    Factory, Azure Synapse Analytics, Azure Data bricks, Python (Pandas)</span></li>
+                            <li><span>Batch Processing: Apache Spark (PySpark).</span></li>
+                            <li><span>Streaming Processing: Apache Kafka.</span></li>
+                            <li><span>Monitoring Tools: SQL Server Agent, Azure Data Factory Triggers, Apache
+                                    Airflow.</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+
+                    <div class="list">
+                        <h2>Data<span style="color:#43a0d3;"> Analytics</span></h2>
+                        <ul>
+                            <li><span>We provide in-depth analytics for data to provide useful business insights.</span>
+                            </li>
+                            <li><span>Analysis Tools : SQL Server, MySQL, Postgres SQL, Snowflake Cloud SQL, Spark
+                                    SQL.</span></li>
+                            <li><span>Reporting Tools: MS Power BI, SQL Server Reporting Services, Tableau, QlikView,
+                                    Qlik Sense.</span></li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
 
 <section class="contactpart pt-75">
     <div class="container">
@@ -398,3 +764,42 @@ main {
 
 
 @include('layouts.footer')
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+<script>
+var swiper2 = new Swiper(".services--swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    autoHeight: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1600: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        401: {
+            slidesPerView: 1.3,
+        },
+        340: {
+            spaceBetween: 10,
+            slidesPerView: 1.1,
+        },
+        280: {
+            slidesPerView: 1,
+        },
+    },
+});
+</script>

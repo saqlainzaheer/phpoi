@@ -1,6 +1,278 @@
 @include('layouts.header')
+<style>
+.context .ethicdiv {
+    width: 100%;
+    position: relative;
+    top: 50vh;
 
-<div class="bannerslider">
+}
+
+.context h3 {
+    text-align: center;
+    color: #fff;
+    font-size: 50px;
+}
+
+
+.area {
+    /* background: #4e54c8; */
+
+
+    background: linear-gradient(89deg, #6681cc 33.58%, rgba(81, 145, 183, 0) 226.92%);
+    /* background: -webkit-linear-gradient(to left, #8f94fb, #4e54c8); */
+    width: 100%;
+    height: 70vh;
+
+
+}
+
+.circles {
+    position: relative;
+
+
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.circles li {
+    position: absolute;
+    display: block;
+    list-style: none;
+    width: 20px;
+    height: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 25s linear infinite;
+    bottom: -150px;
+
+}
+
+.circles li:nth-child(1) {
+    left: 25%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+
+.circles li:nth-child(2) {
+    left: 10%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 2s;
+    animation-duration: 12s;
+}
+
+.circles li:nth-child(3) {
+    left: 70%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 4s;
+}
+
+.circles li:nth-child(4) {
+    left: 40%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 0s;
+    animation-duration: 18s;
+}
+
+.circles li:nth-child(5) {
+    left: 65%;
+    width: 20px;
+    height: 20px;
+    animation-delay: 0s;
+}
+
+.circles li:nth-child(6) {
+    left: 75%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3s;
+}
+
+.circles li:nth-child(7) {
+    left: 35%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 7s;
+}
+
+.circles li:nth-child(8) {
+    left: 50%;
+    width: 25px;
+    height: 25px;
+    animation-delay: 15s;
+    animation-duration: 45s;
+}
+
+.circles li:nth-child(9) {
+    left: 20%;
+    width: 15px;
+    height: 15px;
+    animation-delay: 2s;
+    animation-duration: 35s;
+}
+
+.circles li:nth-child(10) {
+    left: 85%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 11s;
+}
+
+.buildfaster {
+    padding: 0;
+
+}
+
+@keyframes animate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+        border-radius: 0;
+    }
+
+    100% {
+        transform: translateY(-1000px) rotate(720deg);
+        opacity: 0;
+        border-radius: 50%;
+    }
+
+}
+
+.ethichead {
+    width: 30%;
+}
+
+.ethicp {
+    width: 50%;
+
+}
+
+.ethichead h4 {
+
+    color: white;
+    text-align: center;
+    font-family: Play;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 700;
+
+    line-height: 44px;
+    letter-spacing: -0.72px;
+}
+
+.ethicp p {
+
+    color: white;
+    font-family: Play;
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 400;
+    padding-right: 70px;
+    line-height: 149.4%;
+
+}
+
+.ethicdiv {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    /* margin-bottom: 50px; */
+}
+
+.mbtn:hover {
+    background: #67b2f0;
+}
+
+.services__card {
+    border: 1px solid #191b1d;
+
+}
+
+.services__card-imgbox {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    /* Ensure that the image does not overflow the box */
+    position: relative;
+}
+
+.services__card-imgbox img {
+    width: 100%;
+    /* Make the image fill the entire width of its container */
+    height: 100%;
+    /* Ensure the image fills the entire height of its container */
+    object-fit: cover;
+    /* Maintain the aspect ratio while filling the box */
+    display: block;
+    /* Remove any default inline display */
+    position: absolute;
+    /* Position the image absolutely */
+    top: 0;
+    /* Align the image to the top */
+    left: 0;
+}
+
+.services__card-info {
+    padding: 40px;
+}
+
+.services__card-title {
+    margin-bottom: 15px;
+
+    font-style: normal;
+}
+
+.services__card.swiper-slide {
+    height: 100%;
+}
+
+.services__card-description {
+
+    color: #2e2e2e;
+    padding-bottom: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+    .ethichead {
+        width: auto;
+    }
+
+    .ethicp {
+        width: auto;
+
+    }
+
+    .ethicp div {
+        width: 250px;
+        margin: auto;
+
+    }
+
+    .ethicdiv {
+        flex-direction: column;
+    }
+
+    .ethicdiv p {
+        padding: 0;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .context .ethicdiv {
+        width: 100%;
+        position: relative;
+        top: 63vh;
+
+    }
+}
+</style>
+<div class="bannerslider" style="margin-bottom:100px;">
     <div class="captionheader">
         <div class="container">
             <div class="row">
@@ -42,6 +314,7 @@
         <source src="{{ asset('web/images/homevideo.mp4') }}" type="video/mp4">
     </video>
 </div>
+
 <section class="buildfaster">
     <div class="container">
         <div class="row">
@@ -59,22 +332,52 @@
                 </div>
             </div>
         </div>
-        <div class="row mt-150">
-            <div class="col-lg-10 mx-auto">
-                <div class="row">
-                    <div class="col-lg-4 homeat">
-                        WE BELIEVE
-                    </div>
-                    <div class="col-lg-8 homeat">
-                        <h4>Data Integrity Services stands as a premier technology and consulting partner, offering
-                            comprehensive end-to-end solutions within the Microsoft ecosystem. As a dedicated team of
-                            subject matter experts, including Microsoft certified professionals. We are committed to
-                            delivering outstanding results for your business.</h4>
-                        <a href="{{url('we-are')}}" class="btnmake btn-default">Make Forward</a>
-                    </div>
+    </div>
+</section>
+<section>
+    <div class="context">
+        <div class="ethicdiv">
+            <div class="ethichead">
+                <h4 class="">WE<span style="color:#8bcbff;"> BELIEVE</span></h4>
+            </div>
+            <div class="ethicp">
+                <p>Data Integrity Services stands as a premier technology and consulting partner, offering
+                    comprehensive end-to-end solutions within the Microsoft ecosystem. As a dedicated team of
+                    subject matter experts, including Microsoft certified professionals. We are committed to
+                    delivering outstanding results for your business.
+
+                </p>
+                <div>
+
+                    <a href="{{url('our-services')}}" class="btn btn-primary mbtn"
+                        style="background:#8bcbff; font-size: 21px; margin-top:10px;">Make Forward</a>
                 </div>
             </div>
         </div>
+
+
+        <div class="area">
+            <ul class="circles">
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+            </ul>
+        </div>
+</section>
+
+
+
+
+<section class="">
+    <div class="container">
+
         <div id="wemake" class="row  text-center">
             <h4 class="wemake"> We Make</h4>
             <!-- <p>Bringing innovation across all industries</p> -->
@@ -102,108 +405,7 @@
             </figure>
             @endforeach
         </div>
-        <!-- <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images/mis-img-1.png') }}" alt="Dis" />
-                </div>
-                <figcaption>
-                    <p>DIS Reduces 20% in Supply Chain inefficiencies for a Global Retail Chain with Unified Data
-                        Platform and enhanced decision-making.</p>
-                    <a href="#" class="caseset"><span></span> By partnering with Microsoft Azure, Data Integrity
-                        Services (DIS) executed a Unified Data Platform for a leading Global Retail Chain which helped
-                        them reduce 20% of inefficiencies in their logistics network, and improved quality of their data
-                        with Unified BI dashboards.</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <img src="{{ asset('web/images/mis-img-2.png') }}" alt="Dis" />
-                <figcaption>
-                    <p>DIS Saves a Large Financial Institution by securing their data through Cloud Migration</p>
-                    <a href="#" class="caseset"><span></span>Data Integrity Services conducted a secure cloud migration
-                        to Microsoft Azure for a financial institution of thousands, through which several security
-                        measures and adherence management were noticed.</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images/mis-img-3.png') }}" alt="Dis" /> -->
-        <!-- <a href="#" class="videobtn">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
-                <g clip-path="url(#clip0_1_123)">
-                  <path d="M1.14497 1.20377L12.1028 7.86114C12.1813 7.90902 12.2465 7.97746 12.2917 8.05967C12.337 8.14188 12.3608 8.235 12.3608 8.32976C12.3608 8.42453 12.337 8.51764 12.2917 8.59985C12.2465 8.68207 12.1813 8.75051 12.1028 8.79839L1.14497 15.4558C1.06558 15.504 0.975355 15.5296 0.883435 15.5298C0.791515 15.53 0.70117 15.505 0.621557 15.4571C0.541944 15.4092 0.475892 15.3403 0.430096 15.2573C0.384301 15.1743 0.360389 15.0802 0.360784 14.9845V1.67294C0.360757 1.57739 0.384937 1.48353 0.430883 1.40083C0.476829 1.31813 0.542913 1.24952 0.622464 1.20192C0.702015 1.15433 0.792216 1.12944 0.883958 1.12976C0.975701 1.13009 1.06574 1.15562 1.14497 1.20377Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_123">
-                    <rect width="13" height="16" fill="white" transform="translate(0.160095 0.329956)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-          </a> -->
-        <!-- </div>
-                <figcaption>
-                    <p>Upgrading from Equipment Breakdowns of a Manufacturing Plant to Significant Cost Savings by
-                        AI-Driven Maintenance on Microsoft Azure.</p>
-                    <a href="#" class="caseset"><span></span>Data Integrity Services outcame a drowning Manufacturing
-                        Plant with 30% reduction in their equipment downtime by analysing the past breakdowns resulting
-                        in overall improvement of the plant’s infrastructure by their AI-Driven Maintenance
-                        Technologies.
-                    </a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont"> <img src="{{ asset('web/images/mis-img-4.png') }}" alt="Dis" /></div>
-                <figcaption>
-                    <p>DIS Streamlines Customer Interactions of an MNC by Customer Relationship Management (CRM),
-                        powered by Microsoft Azure.</p>
-                    <a href="#" class="caseset"><span></span>Data Integrity Services helped a Multinational Corporation
-                        with efficient collaboration, keeping customer satisfaction in priority, which improved their
-                        user adoption by 40%. This outcome came as a positive result with effective Customer
-                        Relationship Management by user-friendly Power Apps Interface, integrated with Azure.</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont">
-                    <img src="{{ asset('web/images/mis-img-5.png') }}" alt="Dis" /> -->
-        <!-- <a href="#" class="videobtn">
-            <span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
-                <g clip-path="url(#clip0_1_123)">
-                  <path d="M1.14497 1.20377L12.1028 7.86114C12.1813 7.90902 12.2465 7.97746 12.2917 8.05967C12.337 8.14188 12.3608 8.235 12.3608 8.32976C12.3608 8.42453 12.337 8.51764 12.2917 8.59985C12.2465 8.68207 12.1813 8.75051 12.1028 8.79839L1.14497 15.4558C1.06558 15.504 0.975355 15.5296 0.883435 15.5298C0.791515 15.53 0.70117 15.505 0.621557 15.4571C0.541944 15.4092 0.475892 15.3403 0.430096 15.2573C0.384301 15.1743 0.360389 15.0802 0.360784 14.9845V1.67294C0.360757 1.57739 0.384937 1.48353 0.430883 1.40083C0.476829 1.31813 0.542913 1.24952 0.622464 1.20192C0.702015 1.15433 0.792216 1.12944 0.883958 1.12976C0.975701 1.13009 1.06574 1.15562 1.14497 1.20377Z" fill="white" />
-                </g>
-                <defs>
-                  <clipPath id="clip0_1_123">
-                    <rect width="13" height="16" fill="white" transform="translate(0.160095 0.329956)" />
-                  </clipPath>
-                </defs>
-              </svg>
-            </span>
-          </a> -->
-        <!-- </div>
-                <figcaption>
-                    <p> Helping Multinational Sales Organizations struggling with real-time insights with the
-                        implementation of Sales Performance Dashboard</p>
-                    <a href="#" class="caseset"><span></span>Data Integrity Services helped a a Multinational Sales
-                        Organization with 25% increase in their sales revenue with real-time insights and targeted sales
-                        strategies, advancing the collaboration among the sales team region-wise. DIS made it possible
-                        by integrating data from CRM systems, Excel Spreadsheets, and ofcourse by the efforts of its
-                        hard-working team with the help of Power BI Automated Dashboards.</a>
-                </figcaption>
-            </figure>
-            <figure>
-                <div class="imgseccont"> <img src="{{ asset('web/images/mis-img-6.png') }}" alt="Dis" /></div>
-                <figcaption>
-                    <p> Reduced 30% in Onboarding Time and Paperwork of a large HR Management with Power Automation and
-                        Azure AI Services.</p>
-                    <a href="#" class="caseset"><span></span>Data Integrity Services helped a large HR Department facing
-                        difficulties in managing employee onboarding and performance evaluation data by introducing
-                        AI-driven insights to advance their processes. With our Power Automation and Azure AI Services,
-                        decision-making of the AI-infused HR management was enhanced due to which employees were
-                        satisfied through their personalized performance insights.</a>
 
-                </figcaption>
-            </figure>-->
     </div>
 
 </section>
@@ -305,83 +507,44 @@
     </div>
   </div>
 </section> -->
-<section class="latestinsights">
+<style>
+.latestinsights h4 {
+    color: black;
+}
+</style>
+<section class="latestinsights" style="background:white;">
     <div class="container">
         <div class="row mb-75">
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <h4>Latest insights</h4>
+            <div class="col-lg-6 ">
+                <h4 style="color:black;text-align:left; font-size:30px;">Latest insights</h4>
             </div>
-            <div class="col-lg-6 col-md-6 col-sm-6 col-6">
-                <a href="{{url('data-world')}}" class="viewall">View all</a>
+            <div class="col-lg-6 mx-auto">
+                <a href="{{url('data-world')}}" class="viewall" style="color:black; font-size:20px;">View all</a>
             </div>
         </div>
     </div>
-    <div class="owl-carousel owl-theme" id="carousel2">
-        @foreach ($insights as $insights)
-        <div class="item">
-            <div class="sightcorsual"
-                style="background-image: url('{{ asset($insights->image) }}'); width: 100%; max-width: 400px; height: 500px; background-size: cover; background-position: center; overflow: hidden;">
-                <!-- You can add any content inside this div if needed -->
-            </div>
+    <div class="swiper services--swiper">
 
-            <div class="boxmember">
-                <!-- <h6><span class="dot"></span>White Paper</h6> -->
-                <h5>{{$insights->title}}</h5>
+        <div class="services__cards  swiper-wrapper">
+
+
+
+
+            @foreach ($insights as $insight)
+
+            <div class="services__card swiper-slide">
+                <div class="services__card-imgbox">
+                    <img src="{{ asset($insight->image) }}" alt="services">
+                </div>
+                <div class="services__card-info" id="services-card-1">
+                    <h4 class="services__card-title"> {{ $insight->title }}</h4>
+                    <p class="services__card-description">{{ $insight->description }}</p>
+                </div>
             </div>
+            @endforeach
         </div>
-        @endforeach
-        <!-- <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-1.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Advanced algorithms to ensure unparalleled accuracy and reliability in safeguarding your data</h5>
-            </div>
-        </div>
-        <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-2.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Crafting a smooth blend that ensures your data's integrity is rock-solid with our cutting-edge AI,
-                    BI, and ML technologies.</h5>
-            </div>
-        </div>
-        <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-3.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Adapting to evolve patterns and ensuring the highest standards of accuracy through Machine Learning,
-                    refining and optimizing data processes.</h5>
-            </div>
-        </div>
-        <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-4.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Empowering businesses to make informed decisions based on a data-driven foundation</h5>
-            </div>
-        </div>
-        <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-4.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Employing advanced techniques to adapt and fortify the data against evolving risks with our dynamic
-                    security layers</h5>
-            </div>
-        </div>
-        <div class="item">
-            <div class="sightcorsual">
-                <img src="{{ asset('web/images/insight-img-4.png') }}">
-            </div>
-            <div class="boxmember">
-                <h5>Assuring customer-centric approach with our data integrity services revolving around your needs</h5>
-            </div>
-        </div> -->
     </div>
+
 </section>
 <section class="homereview">
     <div class="homereviewbox">
@@ -454,29 +617,47 @@
         </div>
     </div>
 </section>
+
+<style>
+
+</style>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 <script>
-$(document).ready(function() {
-    $("#carousel2").owlCarousel({
-        margin: 20,
-        nav: true,
-
-        loop: true,
-        autoplayTimeout: 2000,
-        autoplayHoverPause: true,
-        autoplay: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            450: {
-                items: 2
-            },
-            1000: {
-                items: 4
-            }
-        }
-
-    });
+var swiper2 = new Swiper(".services--swiper", {
+    slidesPerView: 3,
+    spaceBetween: 30,
+    autoHeight: true,
+    autoplay: {
+        delay: 2500,
+        disableOnInteraction: false,
+    },
+    breakpoints: {
+        1600: {
+            slidesPerView: 3,
+        },
+        992: {
+            slidesPerView: 3,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 1.2,
+            spaceBetween: 15,
+        },
+        401: {
+            slidesPerView: 1.3,
+        },
+        340: {
+            spaceBetween: 10,
+            slidesPerView: 1.1,
+        },
+        280: {
+            slidesPerView: 1,
+        },
+    },
 });
 </script>
 @include('layouts.footer')

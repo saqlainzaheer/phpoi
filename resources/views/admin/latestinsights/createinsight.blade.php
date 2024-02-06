@@ -25,6 +25,13 @@
                                     placeholder="Enter insight Title" maxlength="220">
                             </div>
                         </div>
+                        <div class="mb-3 row">
+                            <label for="description" class="form-label col-md-3">Insight Discription</label>
+                            <div class="col-md-8">
+                                <textarea class="form-control" id="description" name="description" required type="text"
+                                    placeholder="Enter insight Discription" maxlength="220"></textarea>
+                            </div>
+                        </div>
                 </div>
                 <div class="mb-3 row">
                     <label for="image" class="form-label col-md-3">Upload Image </label>
@@ -65,7 +72,7 @@ function validateForm() {
     var image = document.getElementById('image');
 
     // Validate image type
-    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.svg)$/i;
+    var allowedExtensions = /(\.jpg|\.jpeg|\.png|\.svg|\.webp|\ )$/i;
     if (!allowedExtensions.exec(image.value)) {
         document.getElementById('imageError').innerHTML = 'Invalid file type. Please select a valid image.';
         return false;

@@ -134,6 +134,89 @@
 
 
 
+
+/* ----- */
+.wemakeheading {
+
+    margin-bottom: 35px;
+}
+
+.hero {
+    /* padding-top: 100px; */
+    /* padding-bottom: 100px; */
+    /* padding-left: 20px; */
+    flex-wrap: wrap;
+    min-height: 300px;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    flex-direction: row;
+    height: 100%;
+    /* backgro  und: radial-gradient(ellipse at center, rgba(255, 112, 2, 0.1) 0%, rgba(98, 51, 0, 0) 70%), radial-gradient(ellipse at center, rgba(255, 111, 0, 0.05) 0%, rgba(0, 0, 0, 0) 70%), radial-gradient(ellipse at center, rgba(255, 191, 0, 0.1) 0%, rgba(200, 77, 6, 0) 70%) #ffffff; */
+    background: radial-gradient(ellipse at center, rgba(0, 0, 255, 0.1) 0%, rgba(0, 191, 255, 0) 70%), radial-gradient(ellipse at center, rgba(173, 216, 230, 0.05) 0%, rgba(0, 0, 255, 0) 70%), radial-gradient(ellipse at center, rgba(173, 216, 230, 0.1) 0%, rgba(0, 191, 255, 0) 70%) #ffffff;
+
+    background-repeat: no-repeat, no-repeat, no-repeat;
+    background-size: 1200px 1200px, 1200px 1200px, 1200px 1200px;
+    background-attachment: fixed;
+    animation: bganimation 15s infinite;
+}
+
+.makepara {
+    text-align: center;
+    color: #797979;
+    font-family: Play;
+    font-size: 27px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 43.2px;
+}
+
+.ethichead {
+    width: 40%;
+}
+
+.ethicp {
+    width: 60%;
+
+}
+
+.ethichead h4 {
+
+    color: var(--gray-900, #101828);
+    /* text-align: center; */
+    font-family: Play;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 44px;
+    letter-spacing: -0.72px;
+}
+
+.ethicp p {
+
+    color: #797979;
+    font-family: Play;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 149.4%;
+}
+
+.ethicdiv {
+    display: flex;
+    width: 100%;
+    margin: 100px 0;
+    /* margin-bottom: 50px; */
+}
+
+
+
+@keyframes bganimation {
+    50% {
+        background-position-x: 700px;
+    }
+}
+
 @media only screen and (max-width: 979px) {
     .ag-courses_item {
         -ms-flex-preferred-size: calc(50% - 30px);
@@ -153,6 +236,26 @@
 }
 
 @media only screen and (max-width: 639px) {
+    .ethicdiv {
+
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    . .ethichead {
+        width: 100%;
+    }
+
+    .ethicp {
+        width: 100%;
+    }
+
+    .ethicp p {
+        width: 250px;
+        margin: auto;
+    }
+
     .ag-courses_item {
         -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -185,11 +288,6 @@
     .ag-courses-item_date-box {
         font-size: 16px;
     }
-
-
-
-
-
 
     .makeforword {
         padding: 54px 0px;
@@ -234,8 +332,9 @@
         <source src="{{ asset('web/images/weare-vid.mp4') }}" type="video/mp4">
     </video>
 </div>
-<section class="makeforword">
+<section class="makeforword hero">
     <div class="container">
+
         <div class="row">
             <div class="col-lg-12">
                 <h2 class="wemakeheading">Make <span> Forward </span></h2>
@@ -244,26 +343,33 @@
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 <p class="makepara">Data Integrity Services stands as a premier technology and consulting partner,
-                    offering comprehensive end-to-end solutions within the Microsoft ecosystem. As a dedicated team of
-                    subject matter experts, including Microsoft certified professionals. We are committed to delivering
+                    offering comprehensive end-to-end solutions within the Microsoft ecosystem. As a dedicated team
+                    of
+                    subject matter experts, including Microsoft certified professionals. We are committed to
+                    delivering
                     outstanding results for your business. </p>
+                <div style="width:250px;margin:auto;">
+
+                    <a href="{{url('our-services')}}" class="btn btn-primary mbtn"
+                        style="background:#3483ae; font-size: 21px; margin-top:10px;">Make Forward</a>
+                </div>
             </div>
         </div>
+
     </div>
+
 </section>
-<section class="explorepart">
+<!-- <section class="explorepart">
     <div class="container">
         <div class="row">
-            <div class="col-lg-12">
-                <h3 class="mb-5">Explore our stories</h3>
-            </div>
+
         </div>
         <div id="imgrow" class="row">
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0 bexplore">
                 <div class="imgseccont boxexplorevid">
                     <a href="{{url('cloud-providers#casestudiess')}}">
                         <img src="{{ asset('web/images/expore-img01.png') }}" alt="Dis"> </a>
-                    <!-- <a href="#" class="videobtn">
+                     <a href="#" class="videobtn">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                                 <g clip-path="url(#clip0_1_123)">
@@ -277,15 +383,15 @@
                             </svg>
                         </span>
                     </a> -->
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0 bexplore">
-                <div class="imgseccont boxexplorevid">
-                    <a href="{{url('cloud-providers#casestudiess')}}">
+<!-- </div> -->
+<!-- </div>
+<div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0 bexplore">
+    <div class="imgseccont boxexplorevid">
+        <a href="{{url('cloud-providers#casestudiess')}}">
 
-                        <img src="{{ asset('web/images/expore-img02.png') }}" alt="Dis">
-                    </a>
-                    <!-- <a href="#" class="videobtn">
+            <img src="{{ asset('web/images/expore-img02.png') }}" alt="Dis">
+        </a> -->
+<!-- <a href="#" class="videobtn">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                                 <g clip-path="url(#clip0_1_123)">
@@ -298,7 +404,7 @@
                                 </defs>
                             </svg>
                         </span>
-                    </a> -->
+                    </a> 
                 </div>
             </div>
             <div class="col-lg-4 col-md-4 col-sm-4 col-12 p-0 bexplore">
@@ -307,7 +413,7 @@
 
                         <img src="{{ asset('web/images/expore-img03.png') }}" alt="Dis">
                     </a>
-                    <!-- <a href="#" class="videobtn">
+                  <a href="#" class="videobtn">
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="17" viewBox="0 0 14 17" fill="none">
                                 <g clip-path="url(#clip0_1_123)">
@@ -320,7 +426,7 @@
                                 </defs>
                             </svg>
                         </span>
-                    </a> -->
+                    </a>
                 </div>
             </div>
         </div>
@@ -332,6 +438,135 @@
             </div>
         </div>
     </div>
+</section> -->
+
+
+<!-- <section id="sl">
+
+
+    <div class="blog-slider">
+        <div class="swiper-wrapper blog-slider__wrp ">
+            <div class="swiper-slide blog-slider__item ">
+                <div class="blog-slider__img">
+
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759872/kuldar-kalvik-799168-unsplash.webp"
+                        alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2019</span>
+                    <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                    <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+                        voluptate repellendus magni illo ea animi? </div>
+                    <a href="#" class="blog-slider__button">READ MORE</a>
+                </div>
+            </div>
+            <div class="swiper-slide blog-slider__item ">
+                <div class="blog-slider__img">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/jason-leung-798979-unsplash.webp"
+                        alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2019</span>
+                    <div class="blog-slider__title">Lorem Ipsum Dolor2</div>
+                    <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+                        voluptate repellendus magni illo ea animi?</div>
+                    <a href="#" class="blog-slider__button">READ MORE</a>
+                </div>
+            </div>
+
+            <div class="swiper-slide blog-slider__item ">
+                <div class="blog-slider__img">
+                    <img src="https://res.cloudinary.com/muhammederdem/image/upload/q_60/v1535759871/alessandro-capuzzi-799180-unsplash.webp"
+                        alt="">
+                </div>
+                <div class="blog-slider__content">
+                    <span class="blog-slider__code">26 December 2019</span>
+                    <div class="blog-slider__title">Lorem Ipsum Dolor</div>
+                    <div class="blog-slider__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Recusandae
+                        voluptate repellendus magni illo ea animi?</div>
+                    <a href="#" class="blog-slider__button">READ MORE</a>
+                </div>
+            </div>
+
+        </div>
+        <div class="blog-slider__pagination"></div>
+    </div>
+</section> -->
+
+
+<section id="pic">
+    <div class="container">
+
+        <div class="col-lg-12">
+            <h4 class="mb-5 ">Explore our stories</h4>
+        </div>
+        <div class="wrap">
+            <a href="{{url('cloud-providers#casestudiess')}}">
+                <div class="tile">
+                    <img src="{{ asset('web/images/expore-img01.png') }}" />
+                    <div class="text">
+                        <h1>Understanding</h1>
+                        <h2 class="animate-text">We diligently understand your project.</h2>
+                        <p class="animate-text">align with your needs, and set clear expectations before proceeding.
+                        </p>
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+
+                    </div>
+                </div>
+            </a>
+
+
+            <a href="{{url('cloud-providers#casestudiess')}}">
+                <div class="tile">
+
+                    <img src="{{ asset('web/images/expore-img02.png') }}" />
+                    <div class="text">
+                        <h1>Solving</h1>
+                        <h2 class="animate-text">We bring our solutions to life,</h2>
+                        <p class="animate-text">ensuring seamless integration and tangible results, but only after
+                            thorough
+                            understanding and smart problem-solving. </p>
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+
+            <a href="{{url('cloud-providers#casestudiess')}}">
+                <div class="tile">
+
+                    <img src="{{ asset('web/images/expore-img03.png') }}" />
+
+                    <div class="text">
+                        <h1>Implementing</h1>
+                        <h2 class="animate-text">We bring our solutions to life</h2>
+                        <p class="animate-text">Balign with your needs, and set clear expectations before
+                            proceeding. </p>
+                        <div class="dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-lg-10 mx-auto ">
+            <p class="makepara " id="storyb">At the heart of every DIS project lies these three fundamental assets. By
+                allowing these assets to complement and strengthen one another, we deliver effective solutions across
+                diverse industries and subjects.</p>
+        </div>
+
+    </div>
+
+
 </section>
 <section class="wemakeinn">
     <div class="container">
@@ -372,12 +607,15 @@
         <div class="row mt-100">
             <div class="col-lg-12">
                 <h3 class="mb-5">A Microsoft Partner of Distinction </h3>
-                <p style="max-width: 600px;margin-bottom:30px;">As a Solutions Partner , We demonstrate our broad
+                <p style="max-width: 600px;margin-bottom:30px;">As a Solutions Partner , We demonstrate our
+                    broad
                     capability
                     to help customers
                     manage and govern
-                    their data to build analytics and AI, migration of key infrastructure workloads to Azure, modernise
-                    existing applications and build cloud-native apps and safeguard their entire organisation with
+                    their data to build analytics and AI, migration of key infrastructure workloads to Azure,
+                    modernise
+                    existing applications and build cloud-native apps and safeguard their entire organisation
+                    with
                     integrated security, compliance, and identity solutions.
 
                 <div id="partnerlogo" class="row">
@@ -397,9 +635,7 @@
 
 
 
-                <h3 style="margin-bottom :10px; margin-top:150px;">DIS have qualified for Azure
-                    Expert MSP and following
-                    Specializations.
+                <h3 style="margin-bottom :10px; margin-top:150px;">DIS Comprehensive Offerings: Explore Our Services
                 </h3>
 
                 <div class="ag-format-container">
@@ -412,7 +648,8 @@
                                     AI and Machine Learning on Microsoft Azure
                                 </div>
                                 <div class="ag-courses-item_date-box">
-                                    <p class="card-description">Advanced exploration of Azure's AI and ML capabilities,
+                                    <p class="card-description">Advanced exploration of Azure's AI and ML
+                                        capabilities,
                                         including Azure Machine Learning for model training and deployment</p>
 
                                 </div>
@@ -430,7 +667,8 @@
                                 </div>
                                 <div class="ag-courses-item_date-box">
                                     <p class="card-description">In-depth coverage of Azure analytics services,
-                                        encompassing Azure Data Factory for orchestrating data workflows,Azure Synapse
+                                        encompassing Azure Data Factory for orchestrating data workflows,Azure
+                                        Synapse
                                         Analytics for big data</p>
 
                                 </div>
@@ -446,8 +684,10 @@
                                     Data Warehouse Migration to Microsoft Azure
                                 </div>
                                 <div class="ag-courses-item_date-box">
-                                    <p class="card-description">Comprehensive strategies for migrating large-scale
-                                        on-premises data warehouses to Azure, with a focus on optimizing performance,
+                                    <p class="card-description">Comprehensive strategies for migrating
+                                        large-scale
+                                        on-premises data warehouses to Azure, with a focus on optimizing
+                                        performance,
                                         scalability, and cost-effectiveness</p>
 
                                 </div>
@@ -463,7 +703,8 @@
                                     DevOps with GitHub on Microsoft Azure
                                 </div>
                                 <div class="ag-courses-item_date-box">
-                                    <p class="card-description">Advanced DevOps practices using GitHub Actions for
+                                    <p class="card-description">Advanced DevOps practices using GitHub Actions
+                                        for
                                         continuous integration and continuous deployment (CI/CD) pipelines.</p>
 
                                 </div>
@@ -481,7 +722,8 @@
                                 </div>
                                 <div class="ag-courses-item_date-box">
                                     <p class="card-description">Advanced methodologies for migrating complex IT
-                                        infrastructures and databases to Azure, including Azure Migrate, Azure Site
+                                        infrastructures and databases to Azure, including Azure Migrate, Azure
+                                        Site
                                         Recovery</p>
 
                                 </div>
@@ -498,7 +740,8 @@
                                 </div>
                                 <div class="ag-courses-item_date-box">
                                     <p class="card-description">In-depth exploration of deploying and managing
-                                        <br> containerized applications at scale using Azure Kubernetes Service (AKS).
+                                        <br> containerized applications at scale using Azure Kubernetes Service
+                                        (AKS).
                                     </p>
 
                                 </div>
@@ -514,7 +757,8 @@
                                 </div>
                                 <div class="ag-courses-item_date-box">
                                     <p class="card-description">Advanced usage of low-code platforms within the
-                                        Microsoft ecosystem, such as Power Platform, with a focus on building complex
+                                        Microsoft ecosystem, such as Power Platform, with a focus on building
+                                        complex
                                         applications.</p>
 
                                 </div>
@@ -529,7 +773,8 @@
                                     Business Intelligence
                                 </div>
                                 <div class="ag-courses-item_date-box">
-                                    <p class="card-description">Advanced business intelligence practices using Power BI,
+                                    <p class="card-description">Advanced business intelligence practices using
+                                        Power BI,
                                         including data modeling, advanced analytics with DAX (Data Analysis
                                         Expressions), and integration with Azure.</p>
 
@@ -545,9 +790,28 @@
                                     Intelligent Automation
                                 </div>
                                 <div class="ag-courses-item_date-box">
-                                    <p class="card-description">Advanced intelligent automation strategies using Power
-                                        Automate, Azure Logic Apps, and Azure Functions. Emphasis on designing complex
+                                    <p class="card-description">Advanced intelligent automation strategies using
+                                        Power
+                                        Automate, Azure Logic Apps, and Azure Functions. Emphasis on designing
+                                        complex
                                         workflows, integrating with custom APIs.
+                                    </p>
+
+                                </div>
+
+                            </a>
+                        </div>
+                        <div class="ag-courses_item">
+                            <a href="{{url('our-services')}}" class="ag-courses-item_link">
+                                <div class="ag-courses-item_bg"></div>
+
+                                <div class="ag-courses-item_title">
+                                    Build and Modernize AI Apps with Microsoft Azure specialization.
+                                </div>
+                                <div class="ag-courses-item_date-box">
+                                    <p class="card-description">Unlock the potential of AI app development with our
+                                        Microsoft Solutions Partner Specialization, powered by Azure.Elevate your skills
+                                        in creating and modernizing AI-driven applications.
                                     </p>
 
                                 </div>
@@ -564,24 +828,165 @@
 
     </div>
     <div class="wearevideo" style="width: 100%; ">
-
-        <video width="100%" height="100%" autoplay muted loop>
+        <video id="myVideo" controls type="video/mp4" width="100%" height="100%">
             <source src="{{ asset('web/images/F.mp4') }}" type="video/mp4">
         </video>
-
     </div>
 
+
+</section>
+
+<style>
+#values img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 0;
+
+}
+
+#values h3 {
+    margin-bottom: 10px;
+}
+
+#values {
+    padding: 0;
+}
+
+#values .containe {
+    margin: 0 50px;
+}
+
+
+
+#values .headp {
+    font-size: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+</style>
+<section id="values" class="dataworldpart">
+    <div class="containe">
+        <div class="row mb-75">
+            <div class="col-lg-12 ">
+                <h4 class="mainheadingtext text-center">OUR VALUES</h4>
+                <p class="headp text-center">Our values guide everything we do.We believe in honesty, customer focus,
+                    teamwork,
+                    innovation,
+                    respect and social responsibility.</p>
+            </div>
+        </div>
+        <div class="row mb-4">
+
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-1.svg') }}" class="iconjoin"></div>
+                    <h3>Honesty</h3>
+                    <p>We consider honesty to be our highest value. The trust that our customers, employees and business
+                        partners place in us is sacred. Everything we do, how we think, how we interact, will always be
+                        guided by the principle of always doing the right thing, especially when it is difficult to do.
+                        There is no real success without honesty</p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-2.svg') }}" class="iconjoin"></div>
+                    <h3>Experience</h3>
+                    <p>We believe that experience is crucial when serving our customers. We hire people with exceptional
+                        capabilities and potential. We support the spirit of constant growth and striving to achieve an
+                        ever-increasing level of knowledge. Our goal is to help each team member reach their highest
+                        potential.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-3.svg') }}" class="iconjoin"></div>
+                    <h3>Perfection</h3>
+                    <p>We believe that we are trying to do our best. When we deliver the highest level of performance,
+                        the results demonstrate excellent performance, and our customers benefit from it. Our experience
+                        is confirmed by the fact that we provide stable excellent results that matter to the
+                        organizations we work with. The work is really done only when our customers are satisfied with
+                        what we do.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-4.svg') }}" class="iconjoin"></div>
+                    <h3>Dexterity</h3>
+                    <p>We will use our ability to act quickly and gracefully as a source of competitive advantage for
+                        our organization and for our customers. Our agility will be the key to ensuring the sustainable
+                        growth of our company and will be the main reason for the success of our customers, which will
+                        make us their preferred partner.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-5.svg') }}" class="iconjoin"></div>
+                    <h3>Expansion</h3>
+                    <p>We believe that people are our main value. Since we only hire the most talented people, we
+                        encourage them to do their best every day. Every moment in our organization is an opportunity to
+                        showcase your talent and make an impact. Every member of the organization knows that he is
+                        authorized and trusts him to act in the interests of our organization and those whom we serve.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 mb-4">
+                <div class="joinusbox" style="height:100%;">
+                    <div><img src="{{ asset('web/images/vicon-6.svg') }}" class="iconjoin"></div>
+                    <h3>Innovation</h3>
+                    <p>We are sure that the best days in the world are still ahead. We will develop our curiosity,
+                        harness the power of technology and use our resources to create innovative ideas and discover
+                        new ways of thinking. We do this as our part in making this world a better place.</p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+</section>
+<section class="hero">
     <div class="container">
-        <div class="row mt-75">
+
+
+        <div class="container">
+
+
+            <div class="ethicdiv">
+                <div class="ethichead">
+                    <h4 class="">Make forward, act sustainably.</h4>
+                </div>
+                <div class="ethicp">
+                    <p>Believing in the potential of a sustainable future, we always acknowledge
+                        “TECHNOLOGY”
+                        as a powerful tool to attain it. Being the pioneers in digital transformation, we strictly
+                        adhere to
+                        modernization and standardization in maintaining your valuable information and data,
+                        respecting the
+                        upcoming generation rights
+
+                    <div>
+
+                        <a href="{{url('our-services')}}" class="btn btn-primary mbtn"
+                            style="background:#3483ae; font-size: 21px; margin-top:10px;">Make Forward</a>
+                    </div>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- <div class="row mt-75">
             <div class="col-lg-12">
                 <h3 class="mb-5">Make forward, act sustainably.</h3>
-                <p class="mb-5">Believing in the potential of a sustainable future, we always acknowledge “TECHNOLOGY”
-                    as a powerful tool to attain it. Being the pioneers in digital transformation, we strictly adhere to
-                    modernization and standardization in maintaining your valuable information and data, respecting the
+                <p class="mb-5">Believing in the potential of a sustainable future, we always acknowledge
+                    “TECHNOLOGY”
+                    as a powerful tool to attain it. Being the pioneers in digital transformation, we strictly
+                    adhere to
+                    modernization and standardization in maintaining your valuable information and data,
+                    respecting the
                     upcoming generation rights</p>
                 <a href="{{url('our-services')}}" class="btn btn-primary">Discover more</a>
             </div>
-        </div>
+        </div> -->
     </div>
 </section>
 <!-- <section class="bepartour">
@@ -618,3 +1023,51 @@
     </div>
 </section> -->
 @include('layouts.footer')
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+<script>
+var swiper = new Swiper('.blog-slider', {
+    spaceBetween: 30,
+    effect: 'fade',
+    loop: true,
+    mousewheel: {
+        invert: false,
+    },
+    // autoHeight: true,
+    pagination: {
+        el: '.blog-slider__pagination',
+        clickable: true,
+    },
+
+});
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+    var video = document.getElementById('myVideo');
+    var videoHeight = video.offsetHeight;
+
+    // Calculate the threshold dynamically based on the desired visible portion
+    var threshold = (100 / videoHeight);
+
+    // Function to start video playback
+    function startVideo(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                video.play();
+            } else {
+                video.pause(); // Pause video if it's not in view
+            }
+        });
+    }
+
+    // Create an intersection observer instance
+    var observer = new IntersectionObserver(startVideo, {
+        root: null, // Use the viewport as the root
+        rootMargin: "0px", // No margin
+        threshold: threshold // Trigger when the specified portion of the video is in view
+    });
+
+    // Start observing the video element
+    observer.observe(video);
+});
+</script>

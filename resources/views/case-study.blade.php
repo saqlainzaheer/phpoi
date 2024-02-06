@@ -1,18 +1,34 @@
 @include('layouts.header')
-</div>
+
+<style>
+.bannerslider h4 {
+    font-size: 30px;
+    font-weight: 500;
+    padding: 10px 84px 0px 0;
+    color: white;
+}
+
+@media only screen and (max-width: 639px) {
+    .bannerslider h4 {
+        font-size: 16px;
+        padding: 0;
+    }
+}
+</style>
+
 <div class="bannerslider oneuspage">
     <div class="captionheader shadownone lefttextcap nohome">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <h1>World's <span>First</span></h1>
-                    <h4 style="font-size: 40px;font-weight: 500;padding: 10px 84px 0px 0;color: white;">
+                    <h4>
                         {{$casestudy->title}}</h4>
                 </div>
             </div>
         </div>
     </div>
-    <img src="{{ asset('web/images/atgalance.jpg')}}">
+    <img width="100%" height="100%" src="{{ asset('web/images/atgalance.jpg')}}">
 </div>
 <!-- <section class="wecarepart atwecare">
     <div class="container">
@@ -34,61 +50,7 @@
 </section>
 
 
-<footer class="darkfooter">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                <h6>Company</h6>
-                <ul class="fotnab">
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Features</a></li>
-                    <li><a href="#">Works</a></li>
-                    <li><a href="#">Career</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                <h6>Help</h6>
-                <ul class="fotnab">
-                    <li><a href="#"> Customer Support</a></li>
-                    <li><a href="#">Delivery Details</a></li>
-                    <li><a href="#">Terms & Conditions</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                <h6>Resources</h6>
-                <ul class="fotnab">
-                    <li><a href="#"> Free eBooks</a></li>
-                    <li><a href="#">Development Tutorial</a></li>
-                    <li><a href="#">How to - Blog</a></li>
-                    <li><a href="#">Youtube Playlist</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-6">
-                <h6>Install App</h6>
-                <ul class="fotnab">
-                    <li><a href="#"><img src="{{ ('web/images/app-store.png')}}"> </a></li>
-                    <li><a href="#"><img src="{{ ('web/images/play-store.png')}}"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <div class="container fotcopy">
-        <div class="row ">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <p>© Copyright 2022, All Rights Reserved by DIS</p>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <ul class="fotsocial">
-                    <li><a href=""><img src="{{ ('web/images/twitter-icon.svg')}}"></a></li>
-                    <li><a href=""><img src="{{ ('web/images/facebook-icon.svg')}}"></a></li>
-                    <li><a href=""><img src="{{ ('web/images/instagram-icon.svg')}}"></a></li>
-                    <li><a href=""><img src="{{ ('web/images/github-icon.svg')}}"></a></li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</footer>
+
 <script>
 $(document).ready(function() {
     var owl = $('.owl-bepart');
