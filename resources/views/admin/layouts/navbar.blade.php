@@ -56,24 +56,23 @@
             <!-- <li><a class="app-menu__item {{ request()->is('admin/job-positions') ? 'active' : '' }}"
                     href="/admin/job-positions"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Job Positions</span></a></li> -->
-            <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/application/list"><i class="bi bi-briefcase app-menu__icon"></i><span
-                        class="app-menu__label">Job Applications</span></a></li>
-            <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/job/list"><i class="bi bi-briefcase app-menu__icon"></i><span
+            <li><a class="app-menu__item " href="/admin/application/list"><i
+                        class="bi bi-briefcase app-menu__icon"></i><span class="app-menu__label">Job
+                        Applications</span></a></li>
+            <li><a class="app-menu__item " href="/admin/job/list"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Jobs And Designation</span></a></li>
-            <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/list/fact"><i class="bi bi-briefcase app-menu__icon"></i><span
+            <li><a class="app-menu__item " href="/admin/list/fact"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Facts</span></a></li>
-            <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/service/list"><i class="bi bi-briefcase app-menu__icon"></i><span
+            <li><a class="app-menu__item" href="/admin/service/list"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Services</span></a></li>
-            <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/insight/list"><i class="bi bi-briefcase app-menu__icon"></i><span
+            <li><a class="app-menu__item" href="/admin/insight/list"><i class="bi bi-briefcase app-menu__icon"></i><span
                         class="app-menu__label">Insights</span></a></li>
+            <li><a class="app-menu__item " href="/admin/casestudy/list"><i
+                        class="bi bi-briefcase app-menu__icon"></i><span class="app-menu__label">Case Studies</span></a>
+            </li>
             <li><a class="app-menu__item {{ request()->is('admin/job-requests') ? 'active' : '' }}"
-                    href="/admin/casestudy/list"><i class="bi bi-briefcase app-menu__icon"></i><span
-                        class="app-menu__label">Case Studies</span></a></li>
+                    href="/admin/contact/list"><i class="bi bi-briefcase app-menu__icon"></i><span
+                        class="app-menu__label">Contacts</span></a></li>
 
 
 

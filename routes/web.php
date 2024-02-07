@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\FactController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\InsightController;
+use App\Http\Controllers\Admin\NewContactController;
 use App\Http\Controllers\Admin\JobapplicationController;
 use App\Http\Controllers\Admin\CasestudyController;
 use App\Http\Controllers\Admin\PostjobController;
@@ -76,7 +77,11 @@ Route::post('/apply-now',  [WebController::class, 'applyNow']);
 
 
 
-    
+
+// contact routes
+
+Route::post('/contact/store',  [NewContactController::class, 'store']);
+
 
 // Route::get('/join-us', function(){
 //     return view('join-us');
@@ -186,6 +191,10 @@ Route::prefix('admin')->middleware(['auth', 'isAdmin'])->group(function () {
     Route::get('application/list',[JobapplicationController::class,'applicationlist']);
     Route::get('application/view/{id}',[JobapplicationController::class,'applicationview']);
     Route::delete('application/delete/{id}',[JobapplicationController::class,'applicationdelete']);
+   
+   
+    Route::get('contact/list',[NewContactController::class,'index']);
+    Route::delete('contact/delete/{id}',[NewContactController::class,'destroy']);
     
 
 

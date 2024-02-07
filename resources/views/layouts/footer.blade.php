@@ -73,7 +73,7 @@
             </div>
         </div>
 </footer>
-<script>
+<!-- <script>
 $(document).ready(function() {
     var owl = $('.owl-review');
     owl.owlCarousel({
@@ -93,8 +93,8 @@ $(document).ready(function() {
         }
     })
 })
-</script>
-<script>
+</script> -->
+<!-- <script>
 $(document).ready(function() {
     var owl = $('.owl-sight');
     owl.owlCarousel({
@@ -138,7 +138,7 @@ $(document).ready(function() {
         }
     });
 })
-</script>
+</script> -->
 
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"

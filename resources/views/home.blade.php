@@ -409,24 +409,6 @@
     </div>
 
 </section>
-<section class="oursolution">
-    <div class="container">
-        <div class="row solutionvideo">
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <h4>Our Solutions</h4>
-                <p>Our philosophy is simple — hire a team of diverse, passionate people and foster a culture that
-                    empowers you to do you best work.</p>
-                <a href="{{url('contact-us')}}" class="btn btn-primary">Book a discovery call</a>
-            </div>
-            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
-                <div class="rc">
-                    <video src="{{ asset('web/images/vidsolution.mp4') }}" id="localVideoStream" class="video-circle"
-                        width="700px" height="700px" autoplay muted loop></video>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section class="disfact">
     <div class="container">
         <div class="row">
@@ -450,6 +432,47 @@
         </div>
     </div>
 </section>
+<section class="oursolution">
+    <div class="container">
+        <div class="row solutionvideo">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <h4>Our Solutions</h4>
+                <p>Our philosophy is simple — hire a team of diverse, passionate people and foster a culture that
+                    empowers you to do you best work.</p>
+                <a href="{{url('contact-us')}}" class="btn btn-primary">Book a discovery call</a>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-12">
+                <div class="rc">
+                    <video src="{{ asset('web/images/vidsolution.mp4') }}" id="localVideoStream" class="video-circle"
+                        width="700px" height="700px" autoplay muted loop></video>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section class="disfact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h4>The DIS Facts</h4>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10 mx-auto ">
+                <div id="factsrenderhere" class="row justify-content-center">
+                    @foreach ($facts as $fact)
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-12 boxfact">
+                        <h5 class="factnumber">{{ $fact->fact }}</h5>
+                        <p>{{ $fact->factDis }}</p>
+                    </div>
+                    @endforeach
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</section> -->
 <!-- <section class="membersec">
   <div class="container">
     <div class="row">
@@ -512,7 +535,7 @@
     color: black;
 }
 </style>
-<section class="latestinsights" style="background:white;">
+<!-- <section class="latestinsights" style="background:white;">
     <div class="container">
         <div class="row mb-75">
             <div class="col-lg-6 ">
@@ -545,8 +568,8 @@
         </div>
     </div>
 
-</section>
-<section class="homereview">
+</section> -->
+<!-- <section class="homereview">
     <div class="homereviewbox">
         <div class="container">
             <div class="owl-carousel owl-review owl-theme">
@@ -616,7 +639,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <style>
 
@@ -628,8 +651,9 @@ var swiper2 = new Swiper(".services--swiper", {
     slidesPerView: 3,
     spaceBetween: 30,
     autoHeight: true,
+    pauseOnMouseEnter: true,
     autoplay: {
-        delay: 2500,
+        delay: 5000,
         disableOnInteraction: false,
     },
     breakpoints: {
@@ -658,6 +682,16 @@ var swiper2 = new Swiper(".services--swiper", {
             slidesPerView: 1,
         },
     },
+});
+var swiperContainer = document.querySelector('.services--swiper');
+
+swiperContainer.addEventListener('mouseenter', function() {
+    swiper2.autoplay.stop();
+});
+
+// Resume autoplay on mouse leave
+swiperContainer.addEventListener('mouseleave', function() {
+    swiper2.autoplay.start();
 });
 </script>
 @include('layouts.footer')

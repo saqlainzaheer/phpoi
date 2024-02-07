@@ -319,7 +319,7 @@ main {
                     create a customized BI solution that will help your business grow while saving you money
                     and time.
                 </h3>
-                <a href="" class="contact__us-button">Contact us</a>
+                <a href="/contact-us" class="contact__us-button">Contact us</a>
             </div>
         </div>
     </div>
@@ -400,6 +400,29 @@ main {
 
     </div>
 </div>
+<style>
+/* .swiper-button-prev,
+.swiper-button-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.swiper-button-prev {
+    left: 10px;
+}
+
+.swiper-button-next {
+    right: 10px;
+} */
+</style>
 <section class="buildfaster pt-25" id="latesinsight">
     <div class="container">
 
@@ -427,7 +450,8 @@ main {
                 </div>
                 @endforeach
             </div>
-
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
 
     </div>
@@ -444,11 +468,6 @@ main {
                     owners, including enhanced organizational efficiency, dependable data, improved customer experience,
                     and high-quality data analysis. In the sections that follow, we will outline some of the most common
                     advantages of adopting a business intelligence approach.
-
-
-
-
-
 
 
 
@@ -679,7 +698,7 @@ main {
     </div>
 </section>
 
-<section class="contactpart pt-75">
+<!-- <section class="contactpart pt-75">
     <div class="container">
         <div class="contactbond">
             <div class="row">
@@ -760,7 +779,7 @@ main {
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 
 @include('layouts.footer')
@@ -772,8 +791,12 @@ var swiper2 = new Swiper(".services--swiper", {
     spaceBetween: 30,
     autoHeight: true,
     autoplay: {
-        delay: 2500,
+        delay: 6000,
         disableOnInteraction: false,
+    },
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
     },
     breakpoints: {
         1600: {
@@ -801,5 +824,15 @@ var swiper2 = new Swiper(".services--swiper", {
             slidesPerView: 1,
         },
     },
+});
+var swiperContainer = document.querySelector('.services--swiper');
+
+swiperContainer.addEventListener('mouseenter', function() {
+    swiper2.autoplay.stop();
+});
+
+// Resume autoplay on mouse leave
+swiperContainer.addEventListener('mouseleave', function() {
+    swiper2.autoplay.start();
 });
 </script>

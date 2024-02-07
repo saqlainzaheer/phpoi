@@ -20,6 +20,8 @@
     margin-bottom: 30px
 }
 </style>
+
+
 <div class="bannerslider allbanner">
     <div class="captionheader shadownone">
         <div class="container">
@@ -38,8 +40,16 @@
 
 <section class="contactpart">
     <div class="container">
-        @if(Session::has('success'))
-        <p class="alert alert-success">{{ Session::get('success')}}</p>
+        @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
+
+        @if (session('error'))
+        <div class="alert alert-error" role="alert">
+            {{ session('success') }}
+        </div>
         @endif
         <div class="contactbond">
             <div class="row">
@@ -100,24 +110,18 @@
                 </div>
 
                 <div class="col-lg-8">
-                    <form action="{{url('contactus-store')}}" method="post">
+                    <form action="/contact/store" method="post">
                         @csrf
                         <div class="allcontactform">
                             <div class="row">
-                                <div class="col-lg-6">
+                                <div class="col-lg-12">
                                     <div class="form-group">
-                                        <label>First Name</label>
-                                        <input type="text" name="first_name" placeholder="First Name"
+                                        <label>Full Name</label>
+                                        <input type="text" name="full_name" placeholder="First Name"
                                             class="form-control" value="" required>
                                     </div>
                                 </div>
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Last Name</label>
-                                        <input type="text" name="last_name" placeholder="Last Name" class="form-control"
-                                            value="" required>
-                                    </div>
-                                </div>
+
                             </div>
                             <div class="row">
                                 <div class="col-lg-6">
@@ -130,54 +134,12 @@
                                 <div class="col-lg-6">
                                     <div class="form-group">
                                         <label>Phone Number</label>
-                                        <input type="text" name="phone_number" placeholder="Enter Phone Number"
-                                            class="form-control" value="" required>
+                                        <input type="number" name="phone_number" min="0"
+                                            placeholder="Enter Phone Number" class="form-control" value="" required>
                                     </div>
                                 </div>
                             </div>
-                            <div class="row">
-                                <div class="col-lg-12">
-                                    <h4>Select Subject?</h4>
-                                </div>
-                            </div>
-                            <!-- <div class="row mb-3">
-                                <div class="col-lg-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="General Inquiry"
-                                            name="inquiry" id="flexRadioDefault1">
-                                        <label class="form-check-label" for="flexRadioDefault1">
-                                            General Inquiry
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="General Inquiry"
-                                            name="inquiry" id="flexRadioDefault2" checked>
-                                        <label class="form-check-label" for="flexRadioDefault2">
-                                            General Inquiry
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="General Inquiry"
-                                            name="inquiry" id="flexRadioDefault3" checked>
-                                        <label class="form-check-label" for="flexRadioDefault3">
-                                            General Inquiry
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="col-lg-3">
-                                    <div class="form-check">
-                                        <input class="form-check-input" type="radio" value="General Inquiry"
-                                            name="inquiry" id="flexRadioDefault4" checked>
-                                        <label class="form-check-label" for="flexRadioDefault4">
-                                            General Inquiry
-                                        </label>
-                                    </div>
-                                </div>
-                            </div> -->
+
                             <div class="row">
                                 <div class="col-lg-12">
                                     <div class="form-group">
@@ -202,4 +164,16 @@
         </div>
     </div>
 </section>
+<script>
+setTimeout(function() {
+    var alertElement = document.querySelector('.alert');
+
+    if (alertElement) {
+        alertElement.style.display = 'none';
+    } else {
+        // Handle the case where the element is not found
+        // You might want to display an error message to the user or take other actions.
+    }
+}, 4000);
+</script>
 @include('layouts.footer')

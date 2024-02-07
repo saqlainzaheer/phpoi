@@ -1,4 +1,5 @@
 @include('layouts.header')
+
 <style>
 @media only screen and (max-width: 600px) {
 
@@ -46,6 +47,7 @@
 <div class="bannerslider oneuspage">
     <div class="captionheader shadownone lefttextcap nohome">
         <div class="container">
+
             <div class="row">
                 <div class="col-lg-6">
                     <h1>Cloud <span>Providers</span></h1>
@@ -57,6 +59,17 @@
 </div>
 <section class="wecarepart">
     <div class="container">
+        @if (session('success'))
+        <div class="alert alert-success" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
+
+        @if (session('error'))
+        <div class="alert alert-error" role="alert">
+            {{ session('success') }}
+        </div>
+        @endif
         <div class="row mb-75 globeheading">
             <div class="col-lg-6">
                 <h4 class=""><span>Microsoft</span>Empowering Excellence in Data Management: Data Integrity Services
@@ -277,6 +290,7 @@
     </div>
 
 </section>
+
 <section id="contactexp" class="contactpart pt-0">
     <div class="container">
         <div class="contactbond">
@@ -292,71 +306,69 @@
                     </div>
                 </div>
                 <div class="col-lg-7">
-                    <div class="allcontactform">
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>First Name</label>
-                                    <input type="text" name="" placeholder="First Name" class="form-control" value="">
+                    <form action="/contact/store" method="post">
+                        @csrf
+                        <div class="allcontactform">
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Full Name</label>
+                                        <input type="text" name="full_name" placeholder="First Name"
+                                            class="form-control" value="" required>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Email</label>
+                                        <input type="email" name="email" placeholder="demo@yopmail.com"
+                                            class="form-control" value="" required>
+                                    </div>
+                                </div>
+                                <div class="col-lg-6">
+                                    <div class="form-group">
+                                        <label>Phone Number</label>
+                                        <input type="number" name="phone_number" min="0"
+                                            placeholder="Enter Phone Number" class="form-control" value="" required>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Last Name</label>
-                                    <input type="text" name="" placeholder="Doe" class="form-control" value="">
+
+                            <div class="row">
+                                <div class="col-lg-12">
+                                    <div class="form-group">
+                                        <label>Message</label>
+                                        <textarea class="form-control" name="message" placeholder="Write your message.."
+                                            required></textarea>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Email</label>
-                                    <input type="Email" name="" placeholder="" class="form-control" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Phone Number</label>
-                                    <input type="tel" name="" placeholder="+1 012 3456 789" class="form-control"
-                                        value="">
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>Company Name</label>
-                                    <input type="text" name="" placeholder="" class="form-control" value="">
-                                </div>
-                            </div>
-                            <div class="col-lg-6">
-                                <div class="form-group">
-                                    <label>How did you hear about us?</label>
-                                    <select class="form-control">
-                                        <option></option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-lg-12">
-                                <div class="form-group">
-                                    <label>Message</label>
-                                    <textarea class="form-control" placeholder="Write your message.."></textarea>
+                            <div class="row">
+                                <div class="col-lg-12 ">
+                                    <div class="form-group btnpart">
+                                        <input type="submit" name="" value="Send Message" class="btn btn-primary">
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="row">
-                            <div class="col-lg-12 ">
-                                <div class="form-group btnpart">
-                                    <input type="submit" name="" value="Send Message" class="btn btn-primary">
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    </form>
                 </div>
             </div>
         </div>
     </div>
 </section>
+<script>
+setTimeout(function() {
+    var alertElement = document.querySelector('.alert');
+
+    if (alertElement) {
+        alertElement.style.display = 'none';
+    } else {
+        // Handle the case where the element is not found
+        // You might want to display an error message to the user or take other actions.
+    }
+}, 4000);
+</script>
 @include('layouts.footer')
