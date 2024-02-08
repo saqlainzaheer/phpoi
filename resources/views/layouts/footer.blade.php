@@ -46,13 +46,13 @@
 
             <div style="display:flex">
 
-                <a href="#">
+                <a href="https://www.instagram.com/dataintegrityservices/">
                     <img style="width:30px; height:30px" src="{{ asset('web/images/insta.png') }}">
                 </a>
-                <a href="#">
+                <a href="https://www.facebook.com/profile.php?id=61556158206869">
                     <img style="width:55px; height:30px" src="{{ asset('web/images/fb.svg') }}">
                 </a>
-                <a href="#">
+                <a href="https://www.linkedin.com/company/data-integrity-services-us/">
                     <img style="width:38px; height:35px" src="{{ asset('web/images/linked-in.png') }}">
                 </a>
             </div>

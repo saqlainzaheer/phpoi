@@ -37,7 +37,11 @@
         <source src="{{ asset('web/images/contact-vid.mp4') }}" type="video/mp4">
     </video>
 </div>
-
+<style>
+.fotsocial.contactsocial li a:hover {
+    background: #16396d;
+}
+</style>
 <section class="contactpart">
     <div class="container">
         @if (session('success'))
@@ -100,10 +104,13 @@
                         </div>
                         <div class="cpart">
                             <ul class="fotsocial contactsocial">
-                                <li><a href=""><img src="{{ asset('web/images/twitter-icon.svg') }}"></a></li>
-                                <li><a href=""><img src="{{ asset('web/images/facebook-icon.svg') }}"></a></li>
-                                <li><a href=""><img src="{{ asset('web/images/instagram-icon.svg') }}"></a></li>
-                                <li><a href=""><img src="{{ asset('web/images/github-icon.svg') }}"></a></li>
+                                <li><a href="https://www.linkedin.com/company/data-integrity-services-us/"><img
+                                            style="padding:2px;" src="{{ asset('web/images/lk.svg') }}"></a>
+                                </li>
+                                <li><a href="https://www.facebook.com/profile.php?id=61556158206869"><img
+                                            src="{{ asset('web/images/facebook-icon.svg') }}"></a></li>
+                                <li><a href="https://www.instagram.com/dataintegrityservices/"><img
+                                            src="{{ asset('web/images/instagram-icon.svg') }}"></a></li>
                             </ul>
                         </div>
                     </div>

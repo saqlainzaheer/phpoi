@@ -492,7 +492,11 @@
         <div class="blog-slider__pagination"></div>
     </div>
 </section> -->
-
+<style>
+.tile img {
+    object-fit: cover;
+}
+</style>
 
 <section id="pic">
     <div class="container">
@@ -503,7 +507,7 @@
         <div class="wrap">
             <a href="{{url('cloud-providers#casestudiess')}}">
                 <div class="tile">
-                    <img src="{{ asset('web/images/expore-img01.png') }}" />
+                    <img src="{{ asset('web/images/mimg01.jpg') }}" />
                     <div class="text">
                         <h1>Understanding</h1>
                         <h2 class="animate-text">We diligently understand your project.</h2>
@@ -523,13 +527,12 @@
             <a href="{{url('cloud-providers#casestudiess')}}">
                 <div class="tile">
 
-                    <img src="{{ asset('web/images/expore-img02.png') }}" />
+                    <img src="{{ asset('web/images/mimg02.jpg') }}" />
                     <div class="text">
                         <h1>Solving</h1>
-                        <h2 class="animate-text">We bring our solutions to life,</h2>
-                        <p class="animate-text">ensuring seamless integration and tangible results, but only after
-                            thorough
-                            understanding and smart problem-solving. </p>
+                        <h2 class="animate-text">With a team of experts,</h2>
+                        <p class="animate-text">we craft ingenious solutions to address your unique challenges, only
+                            after a deep understanding. </p>
                         <div class="dots">
                             <span></span>
                             <span></span>
@@ -542,13 +545,13 @@
             <a href="{{url('cloud-providers#casestudiess')}}">
                 <div class="tile">
 
-                    <img src="{{ asset('web/images/expore-img03.png') }}" />
+                    <img src="{{ asset('web/images/mimg03.jpg') }}" />
 
                     <div class="text">
                         <h1>Implementing</h1>
                         <h2 class="animate-text">We bring our solutions to life</h2>
-                        <p class="animate-text">Balign with your needs, and set clear expectations before
-                            proceeding. </p>
+                        <p class="animate-text">ensuring seamless integration and tangible results, but only after
+                            thorough understanding and smart problem-solving. </p>
                         <div class="dots">
                             <span></span>
                             <span></span>

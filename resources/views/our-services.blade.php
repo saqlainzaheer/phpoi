@@ -633,7 +633,7 @@ tabm h1 {
                                 create a customized BI solution that will help your business grow while saving you money
                                 and time.
                             </h3>
-                            <a href="" class="contact__us-button">Contact us</a>
+                            <a href="/contact-us" class="contact__us-button">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -779,7 +779,7 @@ tabm h1 {
                                 create a customized BI solution that will help your business grow while saving you money
                                 and time.
                             </h3>
-                            <a href="" class="contact__us-button">Contact us</a>
+                            <a href="/contact-us" class="contact__us-button">Contact us</a>
                         </div>
                     </div>
                 </div>
@@ -986,7 +986,7 @@ tabm h1 {
                                 create a customized BI solution that will help your business grow while saving you money
                                 and time.
                             </h3>
-                            <a href="" class="contact__us-button">Contact us</a>
+                            <a href="/contact-us" class="contact__us-button">Contact us</a>
                         </div>
                     </div>
                 </div>
