@@ -507,7 +507,7 @@
         <div class="wrap">
             <a href="{{url('cloud-providers#casestudiess')}}">
                 <div class="tile">
-                    <img src="{{ asset('web/images/mimg01.jpg') }}" />
+                    <img src="{{ asset('web/images/mimg03.jpg') }}" />
                     <div class="text">
                         <h1>Understanding</h1>
                         <h2 class="animate-text">We diligently understand your project.</h2>
@@ -545,7 +545,7 @@
             <a href="{{url('cloud-providers#casestudiess')}}">
                 <div class="tile">
 
-                    <img src="{{ asset('web/images/mimg03.jpg') }}" />
+                    <img src="{{ asset('web/images/mimg01.jpg') }}" />
 
                     <div class="text">
                         <h1>Implementing</h1>
