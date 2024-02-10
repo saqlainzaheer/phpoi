@@ -285,7 +285,7 @@
             <div class="aidevelopment">
                 <div class="row">
                     <div id="headerlower" class="col-lg-12 col-md-12 col-sm-12 col-12">
-                        <h3>AI for Business Intelligence </h3>
+                        <h3>AI for powerd Intelligence </h3>
                         <p>Microsoft Fabric Integration / Azure Platform Collaboration / Copilot Assistance </p>
                     </div>
                     <div class="col-lg-6 col-md-6 col-sm-6 col-12 r-number">
